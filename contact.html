@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/theme.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYRO SPIN</title>
+
+    <meta name="description" content="Ride stronger with VYRO SPIN, your indoor cycling and performance studio.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Fonts and Font Awesome should be in <head>
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- VYRO SPIN Header -->
+    <header class="vyro-header" id="vyroHeader">
+        <div class="vyro-header-inner">
+
+            <!-- Logo: Left Edge -->
+            <a href="index.html" class="vyro-logo" aria-label="VYRO SPIN Home">
+                <img src="images/logo.png" alt="VYRO SPIN">
+            </a>
+
+            <!-- Center Navigation -->
+            <nav class="vyro-nav" id="vyroNav" aria-label="Main navigation">
+                <a href="index.html" class="vyro-nav-link active">Home 1</a>
+                <a href="home-2.html" class="vyro-nav-link">Home 2</a>
+                <a href="about.html" class="vyro-nav-link">About</a>
+                <a href="class-schedule.html" class="vyro-nav-link">Class Schedule</a>
+                <a href="membership.html" class="vyro-nav-link">Membership &amp; Packages</a>
+                <a href="instructors.html" class="vyro-nav-link">Instructors</a>
+                <a href="contact.html" class="vyro-nav-link">Contact</a>
+                <a href="dashboard.html" class="vyro-nav-link">Dashboard</a>
+
+                <!-- Responsive-only controls inside menu -->
+                <div class="vyro-mobile-controls">
+                    <button type="button" class="vyro-control-btn" data-theme-toggle aria-label="Toggle dark mode">
+                        <i class="fa-solid fa-moon"></i>
+                        <span>Dark Mode</span>
+                    </button>
+
+                    <button type="button" class="vyro-control-btn" data-rtl-toggle aria-label="Toggle RTL layout">
+                        <i class="fa-solid fa-right-left"></i>
+                        <span>RTL Mode</span>
+                    </button>
+
+                    <a href="login.html" class="vyro-login-btn">
+                        Login
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Desktop Right Controls -->
+            <div class="vyro-desktop-controls">
+                <button type="button" class="vyro-icon-btn" data-theme-toggle aria-label="Toggle dark mode"
+                    title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button type="button" class="vyro-icon-btn" data-rtl-toggle aria-label="Toggle RTL layout"
+                    title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="vyro-login-btn">
+                    Login
+                </a>
+            </div>
+
+            <!-- Responsive Menu Toggle -->
+            <button type="button" class="vyro-menu-toggle" id="vyroMenuToggle" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="vyroNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- =========================================
+     SECTION 1: COMMON PAGE HERO
+========================================= -->
+    <section class="vyro-page-hero contact-banner" id="vyroPageHero">
+        <div class="vyro-page-hero-content">
+            <h1>GOT QUESTIONS? LET'S TALK.</h1>
+            <p>
+                Whether you're planning your first ride, choosing a membership or need help with a booking, we're here
+                to help you find your way around VYRO SPIN.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 2: CONTACT INFORMATION -->
+    <section class="vyro-contact-details" id="vyroContactInfo">
+        <div class="vyro-contact-details__container">
+
+            <!-- SECTION HEADING -->
+            <div class="vyro-contact-details__heading">
+                <span class="vyro-contact-details__eyebrow">
+                    WE'RE JUST A MESSAGE AWAY
+                </span>
+
+                <h2>HERE'S HOW TO <span>REACH US</span></h2>
+
+                <p>
+                    Need help with a class, membership or your first visit?
+                    Choose the best way to reach our team and we'll help
+                    you take the next step.
+                </p>
+            </div>
+
+            <!-- CONTACT CARDS -->
+            <div class="vyro-contact-details__grid">
+
+                <!-- CARD 01: PHONE -->
+                <article class="vyro-contact-details__card">
+                    <div class="vyro-contact-details__card-top">
+                        <span class="vyro-contact-details__icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+
+                        <span class="vyro-contact-details__number">01</span>
+                    </div>
+
+                    <span class="vyro-contact-details__label">
+                        TALK TO OUR TEAM
+                    </span>
+
+                    <h3>CALL US</h3>
+
+                    <p>
+                        Have a quick question about classes or bookings?
+                        Give us a call during studio hours.
+                    </p>
+
+                    <a href="tel:+919876543210" class="vyro-contact-details__link">
+                        +91 98765 43210
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- CARD 02: EMAIL -->
+                <article class="vyro-contact-details__card">
+                    <div class="vyro-contact-details__card-top">
+                        <span class="vyro-contact-details__icon">
+                            <i class="fa-regular fa-envelope"></i>
+                        </span>
+
+                        <span class="vyro-contact-details__number">02</span>
+                    </div>
+
+                    <span class="vyro-contact-details__label">
+                        SEND US YOUR QUESTION
+                    </span>
+
+                    <h3>EMAIL US</h3>
+
+                    <p>
+                        Need more information about memberships, packages
+                        or studio policies? Drop us an email.
+                    </p>
+
+                    <a href="mailto:hello@yourdomain.com" class="vyro-contact-details__link">
+                        hello@yourdomain.com
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- CARD 03: LOCATION -->
+                <article class="vyro-contact-details__card">
+                    <div class="vyro-contact-details__card-top">
+                        <span class="vyro-contact-details__icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+
+                        <span class="vyro-contact-details__number">03</span>
+                    </div>
+
+                    <span class="vyro-contact-details__label">
+                        COME SAY HELLO
+                    </span>
+
+                    <h3>VISIT OUR STUDIO</h3>
+
+                    <p>
+                        Planning to visit us? Check our studio address
+                        and directions before heading out.
+                    </p>
+
+                    <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
+                        class="vyro-contact-details__link">
+                        GET DIRECTIONS
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+
+                <!-- CARD 04: OPENING HOURS -->
+                <article class="vyro-contact-details__card">
+                    <div class="vyro-contact-details__card-top">
+                        <span class="vyro-contact-details__icon">
+                            <i class="fa-regular fa-clock"></i>
+                        </span>
+
+                        <span class="vyro-contact-details__number">04</span>
+                    </div>
+
+                    <span class="vyro-contact-details__label">
+                        PLAN YOUR VISIT
+                    </span>
+
+                    <h3>OPENING HOURS</h3>
+
+                    <p>
+                        Check our studio timings before visiting or
+                        contacting the team.
+                    </p>
+
+                    <div class="vyro-contact-details__hours">
+                        <span>Mon - Sat</span>
+                    <strong>6 AM – 9 PM</strong>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- BOTTOM NOTE -->
+            <div class="vyro-contact-details__note">
+                <span class="vyro-contact-details__note-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </span>
+
+                <p>
+                    <strong>Need help choosing a class?</strong>
+                    Explore our schedule to find a ride that fits your
+                    goals and routine.
+                </p>
+
+                <a href="class-schedule.html">
+                    VIEW CLASS SCHEDULE
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: CONTACT FORM -->
+    <section class="vyro-message-center">
+        <div class="vyro-message-center__container">
+
+            <!-- LEFT CONTENT -->
+            <div class="vyro-message-center__intro">
+
+                <span class="vyro-message-center__eyebrow">
+                    LET'S START A CONVERSATION
+                </span>
+
+                <h2>
+                    WE'RE HERE TO
+                    <span>HELP YOU RIDE.</span>
+                </h2>
+
+                <p>
+                    Have a question about our classes, memberships or your
+                    first visit? Send us a message and our team will help
+                    you find the information you need.
+                </p>
+
+                <div class="vyro-message-center__support-list">
+
+                    <div class="vyro-message-center__support-item">
+                        <span class="vyro-message-center__support-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </span>
+
+                        <div>
+                            <h3>CLASS & BOOKING HELP</h3>
+                            <p>
+                                Questions about class times, availability
+                                or your reservation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-message-center__support-item">
+                        <span class="vyro-message-center__support-icon">
+                            <i class="fa-solid fa-ticket"></i>
+                        </span>
+
+                        <div>
+                            <h3>MEMBERSHIP ENQUIRIES</h3>
+                            <p>
+                                Need help understanding our memberships
+                                and class packages?
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-message-center__support-item">
+                        <span class="vyro-message-center__support-icon">
+                            <i class="fa-solid fa-person-biking"></i>
+                        </span>
+
+                        <div>
+                            <h3>YOUR FIRST RIDE</h3>
+                            <p>
+                                Let us help you prepare for your first
+                                indoor cycling experience.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="vyro-message-center__response-note">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>
+                        We'll get back to you as soon as we can.
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- RIGHT CONTACT FORM -->
+            <div class="vyro-message-center__form-panel">
+
+                <div class="vyro-message-center__form-heading">
+                    <span>YOUR MESSAGE MATTERS</span>
+                    <h3>SEND US A MESSAGE</h3>
+                    <p>Fill in the details below so we can assist you.</p>
+                </div>
+
+                <form class="vyro-message-center__form" id="vyroContactForm" action="#" method="post">
+
+                    <div class="vyro-message-center__field-row">
+
+                        <div class="vyro-message-center__field">
+                            <label for="vyroContactName">
+                                Full Name <span>*</span>
+                            </label>
+
+                            <input type="text" id="vyroContactName" name="name" placeholder="Enter your full name"
+                                autocomplete="name" required>
+                        </div>
+
+                        <div class="vyro-message-center__field">
+                            <label for="vyroContactEmail">
+                                Email Address <span>*</span>
+                            </label>
+
+                            <input type="email" id="vyroContactEmail" name="email" placeholder="you@example.com"
+                                autocomplete="email" required>
+                        </div>
+
+                    </div>
+
+                    <div class="vyro-message-center__field-row">
+
+                        <div class="vyro-message-center__field">
+                            <label for="vyroContactPhone">
+                                Phone Number
+                            </label>
+
+                            <input type="tel" id="vyroContactPhone" name="phone" placeholder="Enter your phone number"
+                                autocomplete="tel">
+                        </div>
+
+                        <div class="vyro-message-center__field">
+                            <label for="vyroContactSubject">
+                                Enquiry Type <span>*</span>
+                            </label>
+
+                            <select id="vyroContactSubject" name="subject" required>
+                                <option value="" disabled selected>
+                                    Select an enquiry
+                                </option>
+                                <option value="classes">
+                                    Classes & Schedule
+                                </option>
+                                <option value="booking">
+                                    Booking Assistance
+                                </option>
+                                <option value="membership">
+                                    Membership & Packages
+                                </option>
+                                <option value="first-ride">
+                                    First Ride Questions
+                                </option>
+                                <option value="other">
+                                    Other Enquiry
+                                </option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="vyro-message-center__field">
+                        <label for="vyroContactMessage">
+                            Your Message <span>*</span>
+                        </label>
+
+                        <textarea id="vyroContactMessage" name="message" rows="5"
+                            placeholder="Tell us how we can help..." required></textarea>
+                    </div>
+
+                    <label class="vyro-message-center__consent">
+                        <input type="checkbox" name="privacyConsent" required>
+
+                        <span>
+                            I agree to have my information used to respond
+                            to this enquiry.
+                        </span>
+                    </label>
+
+                    <button type="submit" class="vyro-message-center__submit">
+                        SEND YOUR MESSAGE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <p class="vyro-message-center__privacy-note">
+                        Your details should only be used to handle your
+                        enquiry in line with your privacy policy.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="vyro-studio-location-v2">
+        <div class="vyro-studio-location-v2__container">
+
+            <div class="vyro-studio-location-v2__header">
+                <span class="vyro-studio-location-v2__eyebrow">
+                    FIND YOUR WAY
+                </span>
+
+                <h2>
+                    COME <span>RIDE</span> WITH US
+                </h2>
+
+                <p>
+                    Your next favourite workout is closer than you think.
+                    Find our studio and get ready to ride with VYRO SPIN.
+                </p>
+            </div>
+
+            <div class="vyro-studio-location-v2__info">
+                <div class="vyro-studio-location-v2__info-item">
+                    <span class="vyro-studio-location-v2__icon">⌖</span>
+                    <div>
+                        <h3>OUR STUDIO</h3>
+                        <p>
+                            Add your studio street address, area,
+                            city, state and PIN code here.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="vyro-studio-location-v2__info-item">
+                    <span class="vyro-studio-location-v2__icon">◷</span>
+                    <div>
+                        <h3>VISIT US</h3>
+                        <p>
+                            Check our class schedule before visiting
+                            the studio.
+                        </p>
+                    </div>
+                </div>
+
+                <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
+                    class="vyro-studio-location-v2__directions">
+                    GET DIRECTIONS <span>↗</span>
+                </a>
+            </div>
+
+            <div class="vyro-studio-location-v2__map">
+                <iframe
+                    src="https://maps.google.com/maps?q=Madurai%2C%20Tamil%20Nadu&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    title="VYRO SPIN studio location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+
+                <div class="vyro-studio-location-v2__map-label">
+                    <span class="vyro-studio-location-v2__map-dot"></span>
+                    VYRO SPIN STUDIO
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================
+     VYRO SPIN FOOTER
+========================= -->
+    <footer class="vyro-footer">
+
+        <div class="vyro-footer-main">
+            <div class="vyro-footer-container">
+
+                <!-- Brand -->
+                <div class="vyro-footer-brand">
+                    <a href="index.html" class="vyro-footer-logo">
+                        <img src="images/logo-white.png" alt="VYRO SPIN">
+                    </a>
+
+                    <p>
+                        Ride stronger. Feel the rhythm.
+                        Discover immersive indoor cycling classes
+                        designed to energize your body and mind.
+                    </p>
+
+                    <div class="vyro-footer-socials">
+                        <a href="https://www.instagram.com/" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="vyro-footer-column">
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="instructors.html">Our Instructors</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Classes -->
+                <div class="vyro-footer-column">
+                    <h3>Explore</h3>
+
+                    <ul>
+                        <li>
+                            <a href="class-schedule.html">Class Schedule</a>
+                        </li>
+                        <li>
+                            <a href="membership.html">Membership &amp; Packages</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Member Login</a>
+                        </li>
+                        <li>
+                            <a href="class-schedule.html">Book a Ride</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="vyro-footer-column vyro-footer-contact">
+                    <h3>Get In Touch</h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Your Studio Address, Your City</span>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+919876543210">+91 98765 43210</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:hello@vyrospin.com">
+                            hello@vyrospin.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Mon – Sat: 6 AM – 9 PM</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="vyro-footer-bottom">
+            <div class="vyro-footer-bottom-inner">
+
+                <p>
+                    &copy; <span id="vyroCopyrightYear">2026</span>
+                    VYRO SPIN. All rights reserved.
+                </p>
+
+                <div class="vyro-footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

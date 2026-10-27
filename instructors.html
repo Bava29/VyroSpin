@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/theme.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYRO SPIN</title>
+
+    <meta name="description" content="Ride stronger with VYRO SPIN, your indoor cycling and performance studio.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Fonts and Font Awesome should be in <head>
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- VYRO SPIN Header -->
+    <header class="vyro-header" id="vyroHeader">
+        <div class="vyro-header-inner">
+
+            <!-- Logo: Left Edge -->
+            <a href="index.html" class="vyro-logo" aria-label="VYRO SPIN Home">
+                <img src="images/logo.png" alt="VYRO SPIN">
+            </a>
+
+            <!-- Center Navigation -->
+            <nav class="vyro-nav" id="vyroNav" aria-label="Main navigation">
+                <a href="index.html" class="vyro-nav-link active">Home 1</a>
+                <a href="home-2.html" class="vyro-nav-link">Home 2</a>
+                <a href="about.html" class="vyro-nav-link">About</a>
+                <a href="class-schedule.html" class="vyro-nav-link">Class Schedule</a>
+                <a href="membership.html" class="vyro-nav-link">Membership &amp; Packages</a>
+                <a href="instructors.html" class="vyro-nav-link">Instructors</a>
+                <a href="contact.html" class="vyro-nav-link">Contact</a>
+                <a href="dashboard.html" class="vyro-nav-link">Dashboard</a>
+
+                <!-- Responsive-only controls inside menu -->
+                <div class="vyro-mobile-controls">
+                    <button type="button" class="vyro-control-btn" data-theme-toggle aria-label="Toggle dark mode">
+                        <i class="fa-solid fa-moon"></i>
+                        <span>Dark Mode</span>
+                    </button>
+
+                    <button type="button" class="vyro-control-btn" data-rtl-toggle aria-label="Toggle RTL layout">
+                        <i class="fa-solid fa-right-left"></i>
+                        <span>RTL Mode</span>
+                    </button>
+
+                    <a href="login.html" class="vyro-login-btn">
+                        Login
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Desktop Right Controls -->
+            <div class="vyro-desktop-controls">
+                <button type="button" class="vyro-icon-btn" data-theme-toggle aria-label="Toggle dark mode"
+                    title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button type="button" class="vyro-icon-btn" data-rtl-toggle aria-label="Toggle RTL layout"
+                    title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="vyro-login-btn">
+                    Login
+                </a>
+            </div>
+
+            <!-- Responsive Menu Toggle -->
+            <button type="button" class="vyro-menu-toggle" id="vyroMenuToggle" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="vyroNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- =========================================
+     SECTION 1: COMMON PAGE HERO
+========================================= -->
+    <section class="vyro-page-hero i-banner" id="vyroPageHero">
+        <div class="vyro-page-hero-content">
+            <h1>MEET YOUR RIDE CREW</h1>
+            <p>
+                Behind every great ride is an instructor who pushes you forward, keeps you motivated and helps you find
+                your own rhythm.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 2: MEET OUR INSTRUCTORS -->
+    <section class="vyro-instructor-team" id="vyroInstructorTeam">
+        <div class="vyro-instructor-team-container">
+
+            <div class="vyro-instructor-team-heading">
+                <div class="vyro-instructor-team-heading-left">
+                    <span class="vyro-instructor-team-eyebrow">
+                        THE PEOPLE BEHIND THE PEDALS
+                    </span>
+
+                    <h2>MEET YOUR <span>COACHES</span></h2>
+                </div>
+
+                <p>
+                    Every rider has a different goal. Get to know our coaching
+                    styles and find the instructor who matches your energy,
+                    confidence and riding ambitions.
+                </p>
+            </div>
+
+            <div class="vyro-instructor-team-grid">
+
+                <!-- INSTRUCTOR 01 -->
+                <article class="vyro-instructor-card">
+                    <div class="vyro-instructor-image-wrap">
+                        <img src="images/coach-01.jpg" alt="Alex, indoor cycling instructor"
+                            class="vyro-instructor-image">
+
+                        <span class="vyro-instructor-number">01</span>
+
+                        <span class="vyro-instructor-specialty">
+                            POWER & STRENGTH
+                        </span>
+                    </div>
+
+                    <div class="vyro-instructor-info">
+                        <div class="vyro-instructor-name-row">
+                            <div>
+                                <h3>COACH ALEX</h3>
+                                <span class="vyro-instructor-role">
+                                    THE POWER BUILDER
+                                </span>
+                            </div>
+
+                            <span class="vyro-instructor-icon">
+                                <i class="fa-solid fa-bolt"></i>
+                            </span>
+                        </div>
+
+                        <p>
+                            Build confidence through challenging intervals,
+                            controlled effort and a focus on getting stronger
+                            with every ride.
+                        </p>
+
+                        <div class="vyro-instructor-tags">
+                            <span>Power Ride</span>
+                            <span>Intervals</span>
+                        </div>
+
+                        <a href="class-schedule.html" class="vyro-instructor-link">
+                            FIND A CLASS
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- INSTRUCTOR 02 -->
+                <article class="vyro-instructor-card">
+                    <div class="vyro-instructor-image-wrap">
+                        <img src="images/coach-02.jpg" alt="Maya, rhythm cycling instructor"
+                            class="vyro-instructor-image">
+
+                        <span class="vyro-instructor-number">02</span>
+
+                        <span class="vyro-instructor-specialty">
+                            RHYTHM & ENERGY
+                        </span>
+                    </div>
+
+                    <div class="vyro-instructor-info">
+                        <div class="vyro-instructor-name-row">
+                            <div>
+                                <h3>COACH MAYA</h3>
+                                <span class="vyro-instructor-role">
+                                    THE RHYTHM MAKER
+                                </span>
+                            </div>
+
+                            <span class="vyro-instructor-icon">
+                                <i class="fa-solid fa-music"></i>
+                            </span>
+                        </div>
+
+                        <p>
+                            Find your flow through music-led movement,
+                            uplifting energy and a ride that makes every
+                            beat count.
+                        </p>
+
+                        <div class="vyro-instructor-tags">
+                            <span>Rhythm Ride</span>
+                            <span>Music-led</span>
+                        </div>
+
+                        <a href="class-schedule.html" class="vyro-instructor-link">
+                            FIND A CLASS
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- INSTRUCTOR 03 -->
+                <article class="vyro-instructor-card">
+                    <div class="vyro-instructor-image-wrap">
+                        <img src="images/coach-03.jpg" alt="Jordan, endurance cycling instructor"
+                            class="vyro-instructor-image">
+
+                        <span class="vyro-instructor-number">03</span>
+
+                        <span class="vyro-instructor-specialty">
+                            STAMINA & FOCUS
+                        </span>
+                    </div>
+
+                    <div class="vyro-instructor-info">
+                        <div class="vyro-instructor-name-row">
+                            <div>
+                                <h3>COACH JORDAN</h3>
+                                <span class="vyro-instructor-role">
+                                    THE ENDURANCE GUIDE
+                                </span>
+                            </div>
+
+                            <span class="vyro-instructor-icon">
+                                <i class="fa-solid fa-gauge-high"></i>
+                            </span>
+                        </div>
+
+                        <p>
+                            Develop a steady pace, improve your stamina
+                            and learn how to manage effort throughout
+                            a longer ride.
+                        </p>
+
+                        <div class="vyro-instructor-tags">
+                            <span>Endurance Ride</span>
+                            <span>Pacing</span>
+                        </div>
+
+                        <a href="class-schedule.html" class="vyro-instructor-link">
+                            FIND A CLASS
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- INSTRUCTOR 04 -->
+                <article class="vyro-instructor-card">
+                    <div class="vyro-instructor-image-wrap">
+                        <img src="images/coach-04.jpg" alt="Taylor, beginner-friendly cycling instructor"
+                            class="vyro-instructor-image">
+
+                        <span class="vyro-instructor-number">04</span>
+
+                        <span class="vyro-instructor-specialty">
+                            TECHNIQUE & CONFIDENCE
+                        </span>
+                    </div>
+
+                    <div class="vyro-instructor-info">
+                        <div class="vyro-instructor-name-row">
+                            <div>
+                                <h3>COACH TAYLOR</h3>
+                                <span class="vyro-instructor-role">
+                                    THE CONFIDENCE COACH
+                                </span>
+                            </div>
+
+                            <span class="vyro-instructor-icon">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </span>
+                        </div>
+
+                        <p>
+                            Get comfortable on the bike with clear guidance,
+                            technique tips and encouragement to progress
+                            at your own pace.
+                        </p>
+
+                        <div class="vyro-instructor-tags">
+                            <span>Reset Ride</span>
+                            <span>Bike Basics</span>
+                        </div>
+
+                        <a href="class-schedule.html" class="vyro-instructor-link">
+                            FIND A CLASS
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="vyro-instructor-team-footer">
+                <p>NOT SURE WHICH COACH TO CHOOSE?</p>
+
+                <a href="class-schedule.html">
+                    EXPLORE ALL CLASSES
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: FIND YOUR COACHING STYLE -->
+    <section class="vyro-coaching-style">
+        <div class="vyro-coaching-style-container">
+
+            <div class="vyro-coaching-style-heading">
+                <span class="vyro-coaching-style-eyebrow">
+                    YOUR RIDE. YOUR GOALS.
+                </span>
+
+                <h2>FIND YOUR <span>COACHING STYLE</span></h2>
+
+                <p>
+                    Not sure which instructor or class suits you best?
+                    Start with what you want from your ride and discover
+                    a coaching style that fits your goals.
+                </p>
+            </div>
+
+            <div class="vyro-coaching-style-grid">
+
+                <!-- STYLE 01 -->
+                <article class="vyro-coaching-style-card">
+                    <div class="vyro-coaching-style-top">
+                        <span class="vyro-coaching-style-number">01 / BUILD</span>
+                        <span class="vyro-coaching-style-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </span>
+                    </div>
+
+                    <h3>POWER & PERFORMANCE</h3>
+
+                    <p>
+                        Love a challenge? Train through structured intervals
+                        and controlled resistance while working to improve
+                        your power and strength.
+                    </p>
+
+                    <div class="vyro-coaching-style-meta">
+                        <span><i class="fa-solid fa-fire"></i> Higher intensity</span>
+                        <span><i class="fa-solid fa-bullseye"></i> Performance goals</span>
+                    </div>
+
+                    <a href="class-schedule.html" class="vyro-coaching-style-link">
+                        EXPLORE POWER RIDE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- STYLE 02 -->
+                <article class="vyro-coaching-style-card vyro-coaching-style-highlight">
+                    <div class="vyro-coaching-style-top">
+                        <span class="vyro-coaching-style-number">02 / MOVE</span>
+                        <span class="vyro-coaching-style-icon">
+                            <i class="fa-solid fa-music"></i>
+                        </span>
+                    </div>
+
+                    <h3>RHYTHM & ENERGY</h3>
+
+                    <p>
+                        Prefer music-led movement and an uplifting atmosphere?
+                        Find your rhythm with a coach who brings energy
+                        and flow to every session.
+                    </p>
+
+                    <div class="vyro-coaching-style-meta">
+                        <span><i class="fa-solid fa-headphones"></i> Beat-driven</span>
+                        <span><i class="fa-solid fa-heart"></i> Feel-good energy</span>
+                    </div>
+
+                    <a href="class-schedule.html" class="vyro-coaching-style-link">
+                        EXPLORE RHYTHM RIDE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- STYLE 03 -->
+                <article class="vyro-coaching-style-card">
+                    <div class="vyro-coaching-style-top">
+                        <span class="vyro-coaching-style-number">03 / ENDURE</span>
+                        <span class="vyro-coaching-style-icon">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </span>
+                    </div>
+
+                    <h3>STAMINA & ENDURANCE</h3>
+
+                    <p>
+                        Want to build consistency? Learn to manage your pace,
+                        sustain your effort and work towards longer,
+                        steady rides.
+                    </p>
+
+                    <div class="vyro-coaching-style-meta">
+                        <span><i class="fa-solid fa-clock"></i> Steady effort</span>
+                        <span><i class="fa-solid fa-chart-line"></i> Endurance goals</span>
+                    </div>
+
+                    <a href="class-schedule.html" class="vyro-coaching-style-link">
+                        EXPLORE ENDURANCE RIDE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- STYLE 04 -->
+                <article class="vyro-coaching-style-card">
+                    <div class="vyro-coaching-style-top">
+                        <span class="vyro-coaching-style-number">04 / RESET</span>
+                        <span class="vyro-coaching-style-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </span>
+                    </div>
+
+                    <h3>CONFIDENCE & TECHNIQUE</h3>
+
+                    <p>
+                        New to indoor cycling or returning after a break?
+                        Focus on bike setup, riding basics and building
+                        confidence at your own pace.
+                    </p>
+
+                    <div class="vyro-coaching-style-meta">
+                        <span><i class="fa-solid fa-person"></i> Beginner-friendly</span>
+                        <span><i class="fa-solid fa-check-circle"></i> Learn the basics</span>
+                    </div>
+
+                    <a href="class-schedule.html" class="vyro-coaching-style-link">
+                        EXPLORE RESET RIDE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+            </div>
+
+            <div class="vyro-coaching-style-note">
+                <span class="vyro-coaching-style-note-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </span>
+
+                <p>
+                    <strong>New to spinning?</strong>
+                    Start with a beginner-friendly session and let your
+                    instructor know it's your first ride. You can adjust
+                    resistance and intensity to suit your comfort level.
+                </p>
+
+                <a href="class-schedule.html">
+                    VIEW CLASS SCHEDULE
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: WHAT MAKES A VYRO COACH -->
+    <section class="vyro-coach-difference">
+        <div class="vyro-coach-difference-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="vyro-coach-difference-content">
+                <span class="vyro-coach-difference-eyebrow">
+                    MORE THAN MOTIVATION
+                </span>
+
+                <h2>
+                    GREAT COACHING.
+                    <span>REAL PROGRESS.</span>
+                </h2>
+
+                <p class="vyro-coach-difference-intro">
+                    The right instructor does more than lead a class.
+                    They help you understand your ride, build confidence
+                    and work towards your goals at a pace that feels right
+                    for you.
+                </p>
+
+                <a href="class-schedule.html" class="vyro-coach-difference-main-btn">
+                    FIND YOUR NEXT CLASS
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <div class="vyro-coach-difference-quote">
+                    <span class="vyro-coach-difference-quote-mark">“</span>
+                    <p>
+                        Your strongest ride isn't about keeping up with
+                        everyone else. It's about showing up for yourself.
+                    </p>
+                    <span class="vyro-coach-difference-quote-label">
+                        THE VYRO MINDSET
+                    </span>
+                </div>
+            </div>
+
+            <!-- RIGHT BENEFITS -->
+            <div class="vyro-coach-difference-features">
+
+                <!-- FEATURE 01 -->
+                <article class="vyro-coach-feature">
+                    <div class="vyro-coach-feature-icon">
+                        <i class="fa-solid fa-person-biking"></i>
+                    </div>
+
+                    <div class="vyro-coach-feature-content">
+                        <span class="vyro-coach-feature-number">01</span>
+                        <h3>GET COMFORTABLE ON THE BIKE</h3>
+                        <p>
+                            Learn the basics of bike setup, riding position
+                            and resistance so you can start with greater
+                            confidence.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- FEATURE 02 -->
+                <article class="vyro-coach-feature">
+                    <div class="vyro-coach-feature-icon">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+
+                    <div class="vyro-coach-feature-content">
+                        <span class="vyro-coach-feature-number">02</span>
+                        <h3>TRAIN AT YOUR OWN PACE</h3>
+                        <p>
+                            Understand how to adjust effort and resistance
+                            to match your current fitness level and comfort.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- FEATURE 03 -->
+                <article class="vyro-coach-feature">
+                    <div class="vyro-coach-feature-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+
+                    <div class="vyro-coach-feature-content">
+                        <span class="vyro-coach-feature-number">03</span>
+                        <h3>CHOOSE A CLEAR DIRECTION</h3>
+                        <p>
+                            Whether you want more stamina, stronger efforts
+                            or a regular fitness routine, choose classes
+                            that align with your goals.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- FEATURE 04 -->
+                <article class="vyro-coach-feature">
+                    <div class="vyro-coach-feature-icon">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+
+                    <div class="vyro-coach-feature-content">
+                        <span class="vyro-coach-feature-number">04</span>
+                        <h3>FEEL SUPPORTED, NOT PRESSURED</h3>
+                        <p>
+                            Ask questions, request guidance and take breaks
+                            when needed. Your ride should work for you.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FIRST RIDE GUIDE -->
+    <section class="vyro-newcomer-guide">
+        <div class="vyro-newcomer-guide__container">
+
+            <!-- HEADING -->
+            <header class="vyro-newcomer-guide__header">
+                <span class="vyro-newcomer-guide__eyebrow">
+                    YOUR FIRST RIDE STARTS HERE
+                </span>
+
+                <h2>
+                    NEW TO SPINNING?
+                    <span>WE'VE GOT YOU.</span>
+                </h2>
+
+                <p>
+                    Your first indoor cycling class doesn't have to feel
+                    intimidating. Here's everything you need to know to
+                    arrive prepared, feel comfortable and enjoy your ride.
+                </p>
+            </header>
+
+            <!-- MAIN CONTENT -->
+            <div class="vyro-newcomer-guide__layout">
+
+                <!-- IMAGE PANEL -->
+                <div class="vyro-newcomer-guide__visual">
+                    <img src="images/first-ride-guide.jpg"
+                        alt="Cycling instructor helping a beginner prepare for a ride"
+                        class="vyro-newcomer-guide__photo">
+
+                    <div class="vyro-newcomer-guide__visual-shade"></div>
+
+                    <div class="vyro-newcomer-guide__visual-caption">
+                        <span class="vyro-newcomer-guide__visual-tag">
+                            FIRST CLASS CHECKLIST
+                        </span>
+
+                        <h3>SHOW UP.<br>SETTLE IN.<br>FIND YOUR RHYTHM.</h3>
+
+                        <p>
+                            No experience needed. Just start at your own pace.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- PREPARATION STEPS -->
+                <div class="vyro-newcomer-guide__steps">
+
+                    <article class="vyro-newcomer-guide__item">
+                        <div class="vyro-newcomer-guide__item-index">01</div>
+
+                        <div class="vyro-newcomer-guide__item-body">
+                            <h3>ARRIVE 10–15 MINUTES EARLY</h3>
+                            <p>
+                                Allow time to check in, settle your belongings
+                                and ask your instructor about the bike setup.
+                                Check the studio's arrival policy before booking.
+                            </p>
+                        </div>
+
+                        <div class="vyro-newcomer-guide__item-symbol">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                    </article>
+
+                    <article class="vyro-newcomer-guide__item">
+                        <div class="vyro-newcomer-guide__item-index">02</div>
+
+                        <div class="vyro-newcomer-guide__item-body">
+                            <h3>CHOOSE THE RIGHT GEAR</h3>
+                            <p>
+                                Wear breathable workout clothes and suitable
+                                athletic footwear. Confirm whether your studio
+                                provides cycling shoes or requires specific shoes.
+                            </p>
+                        </div>
+
+                        <div class="vyro-newcomer-guide__item-symbol">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                    </article>
+
+                    <article class="vyro-newcomer-guide__item">
+                        <div class="vyro-newcomer-guide__item-index">03</div>
+
+                        <div class="vyro-newcomer-guide__item-body">
+                            <h3>TELL YOUR INSTRUCTOR</h3>
+                            <p>
+                                Let your coach know you're new. Ask for help
+                                adjusting your seat, handlebars and resistance
+                                before the class begins.
+                            </p>
+                        </div>
+
+                        <div class="vyro-newcomer-guide__item-symbol">
+                            <i class="fa-solid fa-person-circle-check"></i>
+                        </div>
+                    </article>
+
+                    <article class="vyro-newcomer-guide__item">
+                        <div class="vyro-newcomer-guide__item-index">04</div>
+
+                        <div class="vyro-newcomer-guide__item-body">
+                            <h3>RIDE AT YOUR OWN PACE</h3>
+                            <p>
+                                You don't need to match the person next to you.
+                                Adjust your resistance, take breaks when needed
+                                and ask your coach if you need guidance.
+                            </p>
+                        </div>
+
+                        <div class="vyro-newcomer-guide__item-symbol">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                    </article>
+
+                    <article class="vyro-newcomer-guide__item">
+                        <div class="vyro-newcomer-guide__item-index">05</div>
+
+                        <div class="vyro-newcomer-guide__item-body">
+                            <h3>BRING YOUR ESSENTIALS</h3>
+                            <p>
+                                Pack a water bottle and small towel. Follow
+                                studio guidance for hydration, equipment and
+                                storing personal belongings.
+                            </p>
+                        </div>
+
+                        <div class="vyro-newcomer-guide__item-symbol">
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- BOTTOM NOTE -->
+            <div class="vyro-newcomer-guide__reminder">
+
+                <div class="vyro-newcomer-guide__reminder-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <div class="vyro-newcomer-guide__reminder-copy">
+                    <h3>YOUR COMFORT COMES FIRST</h3>
+                    <p>
+                        It's okay to slow down or rest. Stop exercising if you
+                        experience dizziness, chest pain or unusual shortness
+                        of breath, and seek appropriate medical help.
+                    </p>
+                </div>
+
+                <a href="class-schedule.html" class="vyro-newcomer-guide__action">
+                    FIND YOUR FIRST CLASS
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 6: INSTRUCTOR BOOKING CTA -->
+    <section class="vyro-instructor-booking-cta">
+        <div class="vyro-instructor-booking-cta__container">
+
+            <div class="vyro-instructor-booking-cta__content">
+
+                <span class="vyro-instructor-booking-cta__eyebrow">
+                    YOUR NEXT CHAPTER STARTS HERE
+                </span>
+
+                <h2>
+                    FOUND YOUR
+                    <span>RIDE CREW?</span>
+                </h2>
+
+                <p>
+                    Choose a class that matches your goals, meet your coach
+                    and discover what you're capable of. Your next ride is
+                    a chance to show up for yourself.
+                </p>
+
+                <div class="vyro-instructor-booking-cta__actions">
+                    <a href="class-schedule.html" class="vyro-instructor-booking-cta__primary">
+                        EXPLORE CLASS SCHEDULE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="booking.html" class="vyro-instructor-booking-cta__secondary">
+                        BOOK YOUR RIDE
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <div class="vyro-instructor-booking-cta__trust">
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        Choose your preferred class
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        Ride at your own pace
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE IMAGE -->
+            <div class="vyro-instructor-booking-cta__visual">
+
+                <img src="images/instructor-cta.jpg" alt="VYRO SPIN instructor leading an indoor cycling session"
+                    class="vyro-instructor-booking-cta__image">
+
+                <div class="vyro-instructor-booking-cta__image-overlay"></div>
+
+                <div class="vyro-instructor-booking-cta__image-caption">
+                    <span>YOUR ENERGY. YOUR JOURNEY.</span>
+                    <h3>FIND YOUR<br>RHYTHM.</h3>
+                </div>
+
+                <div class="vyro-instructor-booking-cta__image-tag">
+                    <i class="fa-solid fa-bolt"></i>
+                    RIDE WITH PURPOSE
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================
+     VYRO SPIN FOOTER
+========================= -->
+    <footer class="vyro-footer">
+
+        <div class="vyro-footer-main">
+            <div class="vyro-footer-container">
+
+                <!-- Brand -->
+                <div class="vyro-footer-brand">
+                    <a href="index.html" class="vyro-footer-logo">
+                        <img src="images/logo-white.png" alt="VYRO SPIN">
+                    </a>
+
+                    <p>
+                        Ride stronger. Feel the rhythm.
+                        Discover immersive indoor cycling classes
+                        designed to energize your body and mind.
+                    </p>
+
+                    <div class="vyro-footer-socials">
+                        <a href="https://www.instagram.com/" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="vyro-footer-column">
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="instructors.html">Our Instructors</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Classes -->
+                <div class="vyro-footer-column">
+                    <h3>Explore</h3>
+
+                    <ul>
+                        <li>
+                            <a href="class-schedule.html">Class Schedule</a>
+                        </li>
+                        <li>
+                            <a href="membership.html">Membership &amp; Packages</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Member Login</a>
+                        </li>
+                        <li>
+                            <a href="class-schedule.html">Book a Ride</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="vyro-footer-column vyro-footer-contact">
+                    <h3>Get In Touch</h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Your Studio Address, Your City</span>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+919876543210">+91 98765 43210</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:hello@vyrospin.com">
+                            hello@vyrospin.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Mon – Sat: 6 AM – 9 PM</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="vyro-footer-bottom">
+            <div class="vyro-footer-bottom-inner">
+
+                <p>
+                    &copy; <span id="vyroCopyrightYear">2026</span>
+                    VYRO SPIN. All rights reserved.
+                </p>
+
+                <div class="vyro-footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

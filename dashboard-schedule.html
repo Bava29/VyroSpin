@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/theme.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYRO SPIN</title>
+
+    <meta name="description" content="Ride stronger with VYRO SPIN, your indoor cycling and performance studio.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Fonts and Font Awesome should be in <head>
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body class="vyro-dashboard">
+
+    <!-- Fixed sidebar -->
+    <aside class="vyro-dash-sidebar" id="vyroDashSidebar">
+        <button type="button" class="vyro-dash-sidebar-close" id="vyroDashSidebarClose" aria-label="Close sidebar"
+            title="Close sidebar">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <a href="index.html" class="vyro-dash-brand">
+            <img src="images/logo-white.png" alt="VYRO SPIN"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        </a>
+
+        <div class="vyro-dash-side-label">MEMBER SPACE</div>
+
+        <nav class="vyro-dash-nav" aria-label="Dashboard navigation">
+            <a href="dashboard.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Overview</span>
+            </a>
+            <a href="my-bookings.html" class="vyro-dash-nav-link">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+            <a href="dashboard-schedule.html" class="vyro-dash-nav-link active">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Class Schedule</span>
+            </a>
+            <a href="dashboard-membership.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-id-card"></i>
+                <span>Membership</span>
+            </a>
+            <a href="dashboard-instructors.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Instructors</span>
+            </a>
+            <a href="my-progress.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>My Progress</span>
+            </a>
+
+        </nav>
+
+        <div class="vyro-dash-sidebar-bottom">
+
+            <button type="button" class="vyro-dash-logout" id="vyroDashLogout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile/tablet overlay -->
+    <div class="vyro-dash-overlay" id="vyroDashOverlay"></div>
+
+    <!-- Fixed header -->
+    <header class="vyro-dash-header" id="vyroDashHeader">
+        <div class="vyro-dash-header-left">
+            <button type="button" class="vyro-dash-menu-toggle" id="vyroDashMenuToggle" aria-label="Toggle sidebar"
+                aria-expanded="true" aria-controls="vyroDashSidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="vyro-dash-page-heading">
+                <span>MEMBER PORTAL</span>
+                <h1>Class Schedule</h1>
+            </div>
+        </div>
+
+        <div class="vyro-dash-header-right">
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashDarkToggle" aria-label="Toggle dark mode"
+                aria-pressed="false" title="Dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashRtlToggle" aria-label="Toggle RTL mode"
+                aria-pressed="false" title="RTL mode">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <div class="vyro-dash-notification-wrap">
+                <button type="button" class="vyro-dash-header-btn vyro-dash-notification-btn"
+                    id="vyroDashNotificationToggle" aria-label="Notifications, 3 unread" aria-expanded="false">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="vyro-dash-notification-badge">3</span>
+                </button>
+
+                <div class="vyro-dash-notification-panel" id="vyroDashNotificationPanel" hidden>
+                    <div class="vyro-dash-popover-heading">
+                        <strong>Notifications</strong>
+                        <span>3 new</span>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-bicycle"></i>
+                        </span>
+                        <div>
+                            <strong>Your next ride awaits</strong>
+                            <p>Explore upcoming cycling sessions.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </span>
+                        <div>
+                            <strong>Plan your next class</strong>
+                            <p>Check the latest class schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </span>
+                        <div>
+                            <strong>Keep your momentum</strong>
+                            <p>Make time for your next workout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="vyro-dash-member-profile">
+                <img src="images/member-avatar.jpg" alt="Member profile"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="vyro-dash-avatar-fallback">B</span>
+                <span class="vyro-dash-member-info">
+                    <strong>Member Name</strong>
+                    <small>VYRO Member</small>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main dashboard area -->
+
+    <main class="vyro-schedule-main">
+
+        <!-- SECTION 1: WELCOME + FILTERS -->
+        <section class="vyro-schedule-hero">
+            <div class="vyro-schedule-hero-top">
+                <div>
+                    <span class="vyro-schedule-eyebrow">PLAN YOUR NEXT RIDE</span>
+                    <h2>Find Your <span>Rhythm.</span></h2>
+                    <p>Explore our indoor cycling sessions, choose your coach and find a ride that fits your goals.</p>
+                </div>
+                <div class="vyro-schedule-hero-icon">
+                    <i class="fa-solid fa-bicycle"></i>
+                </div>
+            </div>
+
+            <div class="vyro-schedule-filter-bar">
+                <label class="vyro-schedule-field">
+                    <span>Choose Date</span>
+                    <input type="date" id="vyroScheduleDate" aria-label="Choose class date">
+                </label>
+
+                <label class="vyro-schedule-field">
+                    <span>Ride Type</span>
+                    <select id="vyroScheduleType">
+                        <option value="all">All Ride Types</option>
+                        <option value="power">Power Ride</option>
+                        <option value="rhythm">Rhythm Ride</option>
+                        <option value="endurance">Endurance Ride</option>
+                        <option value="reset">Reset Ride</option>
+                    </select>
+                </label>
+
+                <label class="vyro-schedule-field vyro-schedule-search">
+                    <span>Search Classes</span>
+                    <span class="vyro-schedule-search-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="vyroScheduleSearch" placeholder="Class or coach name..."
+                            aria-label="Search classes">
+                    </span>
+                </label>
+
+                <button type="button" class="vyro-schedule-reset" id="vyroScheduleReset">
+                    <i class="fa-solid fa-rotate-left"></i> Reset
+                </button>
+            </div>
+        </section>
+
+
+        <!-- SECTION 2: AVAILABLE CLASSES -->
+        <section class="vyro-schedule-classes">
+            <div class="vyro-schedule-section-heading">
+                <div>
+                    <span class="vyro-schedule-eyebrow">YOUR NEXT SESSION STARTS HERE</span>
+                    <h3>Available Classes</h3>
+                    <p>Choose a session and reserve your bike.</p>
+                </div>
+                <span class="vyro-schedule-results" id="vyroScheduleResultCount">6 classes</span>
+            </div>
+
+            <div class="vyro-schedule-day-tabs" role="group" aria-label="Quick date filters">
+                <button type="button" class="active" data-day="all">All Dates</button>
+                <button type="button" data-day="today">Today</button>
+                <button type="button" data-day="tomorrow">Tomorrow</button>
+                <button type="button" data-day="week">Next 7 Days</button>
+            </div>
+
+            <div class="vyro-schedule-card-grid" id="vyroScheduleCardGrid">
+
+                <article class="vyro-schedule-card" data-type="power" data-date="2026-10-28"
+                    data-title="Power & Performance" data-coach="Coach Alex" data-time="06:30" data-duration="45"
+                    data-seats="4" data-level="High intensity"
+                    data-description="Build strength with challenging intervals and powerful climbs.">
+
+                    <div class="vyro-schedule-card-top">
+                        <span class="vyro-schedule-class-icon power"><i class="fa-solid fa-bolt"></i></span>
+                        <span class="vyro-schedule-class-label">POWER RIDE</span>
+                        <span class="vyro-schedule-seats">4 spots left</span>
+                    </div>
+                    <h4>Power & Performance</h4>
+                    <p class="vyro-schedule-card-description">Build strength with challenging intervals and powerful
+                        climbs.</p>
+                    <div class="vyro-schedule-card-meta">
+                        <span><i class="fa-regular fa-clock"></i> 06:30 AM</span>
+                        <span><i class="fa-solid fa-hourglass-half"></i> 45 min</span>
+                    </div>
+                    <div class="vyro-schedule-coach">
+                        <span class="vyro-schedule-coach-avatar">A</span>
+                        <span><small>YOUR COACH</small><strong>Coach Alex</strong></span>
+                        <span class="vyro-schedule-level">High intensity</span>
+                    </div>
+                    <div class="vyro-schedule-card-bottom">
+                        <span class="vyro-schedule-date-label">28 Oct 2026</span>
+                        <button type="button" class="vyro-schedule-book-btn">Book Class <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <article class="vyro-schedule-card" data-type="rhythm" data-date="2026-10-28"
+                    data-title="Ride to the Rhythm" data-coach="Coach Maya" data-time="07:30" data-duration="45"
+                    data-seats="6" data-level="Music-led"
+                    data-description="Move to the beat in an uplifting music-led cycling session.">
+
+                    <div class="vyro-schedule-card-top">
+                        <span class="vyro-schedule-class-icon rhythm"><i class="fa-solid fa-music"></i></span>
+                        <span class="vyro-schedule-class-label">RHYTHM RIDE</span>
+                        <span class="vyro-schedule-seats">6 spots left</span>
+                    </div>
+                    <h4>Ride to the Rhythm</h4>
+                    <p class="vyro-schedule-card-description">Move to the beat in an uplifting music-led cycling
+                        session.</p>
+                    <div class="vyro-schedule-card-meta">
+                        <span><i class="fa-regular fa-clock"></i> 07:30 AM</span>
+                        <span><i class="fa-solid fa-hourglass-half"></i> 45 min</span>
+                    </div>
+                    <div class="vyro-schedule-coach">
+                        <span class="vyro-schedule-coach-avatar">M</span>
+                        <span><small>YOUR COACH</small><strong>Coach Maya</strong></span>
+                        <span class="vyro-schedule-level">Music-led</span>
+                    </div>
+                    <div class="vyro-schedule-card-bottom">
+                        <span class="vyro-schedule-date-label">28 Oct 2026</span>
+                        <button type="button" class="vyro-schedule-book-btn">Book Class <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <article class="vyro-schedule-card" data-type="endurance" data-date="2026-10-29"
+                    data-title="Build Your Stamina" data-coach="Coach Jordan" data-time="06:00" data-duration="50"
+                    data-seats="3" data-level="Steady pace"
+                    data-description="Develop endurance through a consistent, controlled ride.">
+
+                    <div class="vyro-schedule-card-top">
+                        <span class="vyro-schedule-class-icon endurance"><i class="fa-solid fa-heart-pulse"></i></span>
+                        <span class="vyro-schedule-class-label">ENDURANCE RIDE</span>
+                        <span class="vyro-schedule-seats">3 spots left</span>
+                    </div>
+                    <h4>Build Your Stamina</h4>
+                    <p class="vyro-schedule-card-description">Develop endurance through a consistent, controlled ride.
+                    </p>
+                    <div class="vyro-schedule-card-meta">
+                        <span><i class="fa-regular fa-clock"></i> 06:00 AM</span>
+                        <span><i class="fa-solid fa-hourglass-half"></i> 50 min</span>
+                    </div>
+                    <div class="vyro-schedule-coach">
+                        <span class="vyro-schedule-coach-avatar">J</span>
+                        <span><small>YOUR COACH</small><strong>Coach Jordan</strong></span>
+                        <span class="vyro-schedule-level">Steady pace</span>
+                    </div>
+                    <div class="vyro-schedule-card-bottom">
+                        <span class="vyro-schedule-date-label">29 Oct 2026</span>
+                        <button type="button" class="vyro-schedule-book-btn">Book Class <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <article class="vyro-schedule-card" data-type="reset" data-date="2026-10-30"
+                    data-title="Reset & Recharge" data-coach="Coach Taylor" data-time="08:00" data-duration="40"
+                    data-seats="8" data-level="All levels"
+                    data-description="A balanced session to move comfortably and reconnect with your rhythm.">
+
+                    <div class="vyro-schedule-card-top">
+                        <span class="vyro-schedule-class-icon reset"><i class="fa-solid fa-leaf"></i></span>
+                        <span class="vyro-schedule-class-label">RESET RIDE</span>
+                        <span class="vyro-schedule-seats">8 spots left</span>
+                    </div>
+                    <h4>Reset & Recharge</h4>
+                    <p class="vyro-schedule-card-description">A balanced session to move comfortably and reconnect with
+                        your rhythm.</p>
+                    <div class="vyro-schedule-card-meta">
+                        <span><i class="fa-regular fa-clock"></i> 08:00 AM</span>
+                        <span><i class="fa-solid fa-hourglass-half"></i> 40 min</span>
+                    </div>
+                    <div class="vyro-schedule-coach">
+                        <span class="vyro-schedule-coach-avatar">T</span>
+                        <span><small>YOUR COACH</small><strong>Coach Taylor</strong></span>
+                        <span class="vyro-schedule-level">All levels</span>
+                    </div>
+                    <div class="vyro-schedule-card-bottom">
+                        <span class="vyro-schedule-date-label">30 Oct 2026</span>
+                        <button type="button" class="vyro-schedule-book-btn">Book Class <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <article class="vyro-schedule-card" data-type="power" data-date="2026-11-01"
+                    data-title="Weekend Power Ride" data-coach="Coach Alex" data-time="09:00" data-duration="45"
+                    data-seats="2" data-level="High intensity"
+                    data-description="Start your weekend with an energising ride and strong intervals.">
+
+                    <div class="vyro-schedule-card-top">
+                        <span class="vyro-schedule-class-icon power"><i class="fa-solid fa-bolt"></i></span>
+                        <span class="vyro-schedule-class-label">POWER RIDE</span>
+                        <span class="vyro-schedule-seats limited">Only 2 spots</span>
+                    </div>
+                    <h4>Weekend Power Ride</h4>
+                    <p class="vyro-schedule-card-description">Start your weekend with an energising ride and strong
+                        intervals.</p>
+                    <div class="vyro-schedule-card-meta">
+                        <span><i class="fa-regular fa-clock"></i> 09:00 AM</span>
+                        <span><i class="fa-solid fa-hourglass-half"></i> 45 min</span>
+                    </div>
+                    <div class="vyro-schedule-coach">
+                        <span class="vyro-schedule-coach-avatar">A</span>
+                        <span><small>YOUR COACH</small><strong>Coach Alex</strong></span>
+                        <span class="vyro-schedule-level">High intensity</span>
+                    </div>
+                    <div class="vyro-schedule-card-bottom">
+                        <span class="vyro-schedule-date-label">01 Nov 2026</span>
+                        <button type="button" class="vyro-schedule-book-btn">Book Class <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <article class="vyro-schedule-card" data-type="rhythm" data-date="2026-11-03"
+                    data-title="Feel-Good Rhythm" data-coach="Coach Maya" data-time="07:00" data-duration="45"
+                    data-seats="5" data-level="Music-led"
+                    data-description="Enjoy a lively, music-led session designed to keep you moving.">
+
+                    <div class="vyro-schedule-card-top">
+                        <span class="vyro-schedule-class-icon rhythm"><i class="fa-solid fa-music"></i></span>
+                        <span class="vyro-schedule-class-label">RHYTHM RIDE</span>
+                        <span class="vyro-schedule-seats">5 spots left</span>
+                    </div>
+                    <h4>Feel-Good Rhythm</h4>
+                    <p class="vyro-schedule-card-description">Enjoy a lively, music-led session designed to keep you
+                        moving.</p>
+                    <div class="vyro-schedule-card-meta">
+                        <span><i class="fa-regular fa-clock"></i> 07:00 AM</span>
+                        <span><i class="fa-solid fa-hourglass-half"></i> 45 min</span>
+                    </div>
+                    <div class="vyro-schedule-coach">
+                        <span class="vyro-schedule-coach-avatar">M</span>
+                        <span><small>YOUR COACH</small><strong>Coach Maya</strong></span>
+                        <span class="vyro-schedule-level">Music-led</span>
+                    </div>
+                    <div class="vyro-schedule-card-bottom">
+                        <span class="vyro-schedule-date-label">03 Nov 2026</span>
+                        <button type="button" class="vyro-schedule-book-btn">Book Class <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="vyro-schedule-empty" id="vyroScheduleEmpty" hidden>
+                <i class="fa-regular fa-calendar-xmark"></i>
+                <h4>No classes found</h4>
+                <p>Try a different date, ride type or search term.</p>
+                <button type="button" id="vyroScheduleEmptyReset">Clear Filters</button>
+            </div>
+        </section>
+
+
+        <!-- SECTION 3: RIDE GUIDE -->
+        <section class="vyro-schedule-guide">
+            <div class="vyro-schedule-guide-heading">
+                <span class="vyro-schedule-eyebrow">NOT SURE WHERE TO START?</span>
+                <h3>Choose the Ride That Fits You</h3>
+                <p>Every ride has a different feel. Find the one that matches your mood and goals.</p>
+            </div>
+
+            <div class="vyro-schedule-guide-grid">
+                <button type="button" class="vyro-schedule-guide-card" data-guide="power">
+                    <span class="vyro-schedule-guide-icon"><i class="fa-solid fa-bolt"></i></span>
+                    <strong>Power Ride</strong>
+                    <small>For strength and high-energy intervals</small>
+                    <span class="vyro-schedule-guide-link">Explore classes <i
+                            class="fa-solid fa-arrow-right"></i></span>
+                </button>
+
+                <button type="button" class="vyro-schedule-guide-card" data-guide="rhythm">
+                    <span class="vyro-schedule-guide-icon"><i class="fa-solid fa-music"></i></span>
+                    <strong>Rhythm Ride</strong>
+                    <small>For music, movement and motivation</small>
+                    <span class="vyro-schedule-guide-link">Explore classes <i
+                            class="fa-solid fa-arrow-right"></i></span>
+                </button>
+
+                <button type="button" class="vyro-schedule-guide-card" data-guide="endurance">
+                    <span class="vyro-schedule-guide-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                    <strong>Endurance Ride</strong>
+                    <small>For stamina and steady effort</small>
+                    <span class="vyro-schedule-guide-link">Explore classes <i
+                            class="fa-solid fa-arrow-right"></i></span>
+                </button>
+
+                <button type="button" class="vyro-schedule-guide-card" data-guide="reset">
+                    <span class="vyro-schedule-guide-icon"><i class="fa-solid fa-leaf"></i></span>
+                    <strong>Reset Ride</strong>
+                    <small>For a balanced, comfortable session</small>
+                    <span class="vyro-schedule-guide-link">Explore classes <i
+                            class="fa-solid fa-arrow-right"></i></span>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- BOOKING CONFIRMATION MODAL -->
+    <div class="vyro-schedule-modal" id="vyroScheduleModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroScheduleModalTitle" hidden>
+        <div class="vyro-schedule-modal-card">
+            <span class="vyro-schedule-modal-icon"><i class="fa-solid fa-bicycle"></i></span>
+            <span class="vyro-schedule-eyebrow">YOUR NEXT RIDE</span>
+            <h3 id="vyroScheduleModalTitle">Book this class?</h3>
+            <p id="vyroScheduleModalDescription"></p>
+
+            <div class="vyro-schedule-modal-summary" id="vyroScheduleModalSummary"></div>
+
+            <p class="vyro-schedule-modal-note">
+                This demo will not create a permanent booking until connected to your booking system.
+            </p>
+
+            <div class="vyro-schedule-modal-actions">
+                <button type="button" id="vyroScheduleModalClose">Not Now</button>
+                <button type="button" id="vyroScheduleConfirm">Continue to Bookings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout confirmation modal -->
+    <div class="vyro-dash-modal" id="vyroDashLogoutModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroDashLogoutTitle" hidden>
+        <div class="vyro-dash-modal-card">
+            <div class="vyro-dash-modal-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <h2 id="vyroDashLogoutTitle">Log out of your account?</h2>
+            <p>Are you sure you want to log out of your VYRO SPIN member account?</p>
+            <div class="vyro-dash-modal-actions">
+                <button type="button" class="vyro-dash-cancel-btn" id="vyroDashLogoutNo">
+                    No, stay
+                </button>
+                <button type="button" class="vyro-dash-confirm-logout" id="vyroDashLogoutYes">
+                    Yes, log out
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

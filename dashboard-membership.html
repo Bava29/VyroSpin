@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/theme.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYRO SPIN</title>
+
+    <meta name="description" content="Ride stronger with VYRO SPIN, your indoor cycling and performance studio.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Fonts and Font Awesome should be in <head>
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body class="vyro-dashboard">
+
+    <!-- Fixed sidebar -->
+    <aside class="vyro-dash-sidebar" id="vyroDashSidebar">
+        <button type="button" class="vyro-dash-sidebar-close" id="vyroDashSidebarClose" aria-label="Close sidebar"
+            title="Close sidebar">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <a href="index.html" class="vyro-dash-brand">
+            <img src="images/logo-white.png" alt="VYRO SPIN"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        </a>
+
+        <div class="vyro-dash-side-label">MEMBER SPACE</div>
+
+        <nav class="vyro-dash-nav" aria-label="Dashboard navigation">
+            <a href="dashboard.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Overview</span>
+            </a>
+            <a href="my-bookings.html" class="vyro-dash-nav-link">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+            <a href="dashboard-schedule.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Class Schedule</span>
+            </a>
+            <a href="dashboard-membership.html" class="vyro-dash-nav-link active">
+                <i class="fa-solid fa-id-card"></i>
+                <span>Membership</span>
+            </a>
+            <a href="dashboard-instructors.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Instructors</span>
+            </a>
+            <a href="my-progress.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>My Progress</span>
+            </a>
+
+        </nav>
+
+        <div class="vyro-dash-sidebar-bottom">
+
+            <button type="button" class="vyro-dash-logout" id="vyroDashLogout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile/tablet overlay -->
+    <div class="vyro-dash-overlay" id="vyroDashOverlay"></div>
+
+    <!-- Fixed header -->
+    <header class="vyro-dash-header" id="vyroDashHeader">
+        <div class="vyro-dash-header-left">
+            <button type="button" class="vyro-dash-menu-toggle" id="vyroDashMenuToggle" aria-label="Toggle sidebar"
+                aria-expanded="true" aria-controls="vyroDashSidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="vyro-dash-page-heading">
+                <span>MEMBER PORTAL</span>
+                <h1>My Membership</h1>
+            </div>
+        </div>
+
+        <div class="vyro-dash-header-right">
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashDarkToggle" aria-label="Toggle dark mode"
+                aria-pressed="false" title="Dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashRtlToggle" aria-label="Toggle RTL mode"
+                aria-pressed="false" title="RTL mode">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <div class="vyro-dash-notification-wrap">
+                <button type="button" class="vyro-dash-header-btn vyro-dash-notification-btn"
+                    id="vyroDashNotificationToggle" aria-label="Notifications, 3 unread" aria-expanded="false">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="vyro-dash-notification-badge">3</span>
+                </button>
+
+                <div class="vyro-dash-notification-panel" id="vyroDashNotificationPanel" hidden>
+                    <div class="vyro-dash-popover-heading">
+                        <strong>Notifications</strong>
+                        <span>3 new</span>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-bicycle"></i>
+                        </span>
+                        <div>
+                            <strong>Your next ride awaits</strong>
+                            <p>Explore upcoming cycling sessions.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </span>
+                        <div>
+                            <strong>Plan your next class</strong>
+                            <p>Check the latest class schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </span>
+                        <div>
+                            <strong>Keep your momentum</strong>
+                            <p>Make time for your next workout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="vyro-dash-member-profile">
+                <img src="images/member-avatar.jpg" alt="Member profile"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="vyro-dash-avatar-fallback">B</span>
+                <span class="vyro-dash-member-info">
+                    <strong>Member Name</strong>
+                    <small>VYRO Member</small>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main dashboard area -->
+
+    <main class="vyro-member-page">
+
+        <!-- SECTION 1: CURRENT MEMBERSHIP -->
+        <section class="vyro-member-hero">
+            <div class="vyro-member-hero-top">
+                <div>
+                    <span class="vyro-member-eyebrow">YOUR VYRO SPIN ACCOUNT</span>
+                    <h2>My <span>Membership</span></h2>
+                    <p>Keep track of your plan, make the most of your classes and plan your next ride.</p>
+                </div>
+                <span class="vyro-member-status">
+                    <i class="fa-solid fa-circle-check"></i> Active Plan
+                </span>
+            </div>
+
+            <div class="vyro-member-plan-card">
+                <div class="vyro-member-plan-main">
+                    <span class="vyro-member-plan-kicker">
+                        <i class="fa-solid fa-crown"></i> YOUR CURRENT PLAN
+                    </span>
+                    <h3>8 Class Pack</h3>
+                    <p>Flexible rides. Your pace. Your progress.</p>
+
+                    <div class="vyro-member-plan-price">
+                        <strong>₹2,499</strong>
+                        <span>/ 8 classes</span>
+                    </div>
+                </div>
+
+                <div class="vyro-member-plan-usage">
+                    <div class="vyro-member-usage-heading">
+                        <span>Class Pack Usage</span>
+                        <strong id="vyroMemberUsageText">2 of 8 used</strong>
+                    </div>
+
+                    <div class="vyro-member-progress-track" role="progressbar" aria-label="Membership class usage"
+                        aria-valuemin="0" aria-valuemax="8" aria-valuenow="2" id="vyroMemberProgress">
+                        <span id="vyroMemberProgressFill"></span>
+                    </div>
+
+                    <div class="vyro-member-usage-footer">
+                        <span><strong id="vyroMemberRemaining">6</strong> classes remaining</span>
+                        <span id="vyroMemberPercent">25% used</span>
+                    </div>
+
+                    <a href="dashboard-schedule.html" class="vyro-member-primary-btn">
+                        Book Your Next Ride <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="vyro-member-summary-grid">
+                <article class="vyro-member-summary-item">
+                    <span class="vyro-member-summary-icon"><i class="fa-solid fa-ticket"></i></span>
+                    <div>
+                        <small>CLASSES INCLUDED</small>
+                        <strong>8 classes</strong>
+                    </div>
+                </article>
+
+                <article class="vyro-member-summary-item">
+                    <span class="vyro-member-summary-icon"><i class="fa-solid fa-bicycle"></i></span>
+                    <div>
+                        <small>CLASSES COMPLETED</small>
+                        <strong>2 classes</strong>
+                    </div>
+                </article>
+
+                <article class="vyro-member-summary-item">
+                    <span class="vyro-member-summary-icon"><i class="fa-regular fa-calendar"></i></span>
+                    <div>
+                        <small>PLAN TYPE</small>
+                        <strong>Class Pack</strong>
+                    </div>
+                </article>
+
+                <article class="vyro-member-summary-item">
+                    <span class="vyro-member-summary-icon"><i class="fa-solid fa-wallet"></i></span>
+                    <div>
+                        <small>PRICE PER CLASS</small>
+                        <strong>₹312.38</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- SECTION 2: BENEFITS AND USAGE -->
+        <section class="vyro-member-benefits">
+            <div class="vyro-member-section-heading">
+                <div>
+                    <span class="vyro-member-eyebrow">MAKE EVERY RIDE COUNT</span>
+                    <h3>Your Membership Benefits</h3>
+                    <p>See what your plan offers and keep an eye on your class usage.</p>
+                </div>
+            </div>
+
+            <div class="vyro-member-benefit-layout">
+                <div class="vyro-member-benefit-list">
+
+                    <article class="vyro-member-benefit">
+                        <span class="vyro-member-benefit-icon"><i class="fa-solid fa-calendar-check"></i></span>
+                        <div>
+                            <h4>Flexible Class Booking</h4>
+                            <p>Choose available cycling sessions that suit your schedule.</p>
+                        </div>
+                        <span class="vyro-member-benefit-tag">Included</span>
+                    </article>
+
+                    <article class="vyro-member-benefit">
+                        <span class="vyro-member-benefit-icon"><i class="fa-solid fa-users"></i></span>
+                        <div>
+                            <h4>Instructor-Led Sessions</h4>
+                            <p>Train with a coach who guides your ride and keeps you motivated.</p>
+                        </div>
+                        <span class="vyro-member-benefit-tag">Included</span>
+                    </article>
+
+                    <article class="vyro-member-benefit">
+                        <span class="vyro-member-benefit-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        <div>
+                            <h4>Track Your Ride Journey</h4>
+                            <p>Follow your completed sessions from your member dashboard.</p>
+                        </div>
+                        <a href="my-progress.html" class="vyro-member-small-link">View progress</a>
+                    </article>
+
+                    <article class="vyro-member-benefit">
+                        <span class="vyro-member-benefit-icon"><i class="fa-solid fa-bolt"></i></span>
+                        <div>
+                            <h4>Choose Your Ride Style</h4>
+                            <p>Explore Power, Rhythm, Endurance and Reset sessions.</p>
+                        </div>
+                        <a href="dashboard-schedule.html" class="vyro-member-small-link">Explore rides</a>
+                    </article>
+
+                </div>
+
+                <aside class="vyro-member-usage-card">
+                    <span class="vyro-member-usage-icon"><i class="fa-solid fa-chart-pie"></i></span>
+                    <span class="vyro-member-eyebrow">YOUR CLASS BREAKDOWN</span>
+                    <h4>Keep Your Momentum</h4>
+                    <p>You have classes ready for your next session. Book ahead to stay consistent.</p>
+
+                    <div class="vyro-member-breakdown">
+                        <div><span>Used classes</span><strong>2</strong></div>
+                        <div><span>Available classes</span><strong>6</strong></div>
+                        <div><span>Total pack</span><strong>8</strong></div>
+                    </div>
+
+                    <a href="my-bookings.html" class="vyro-member-secondary-btn">
+                        View My Bookings <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </aside>
+            </div>
+        </section>
+
+
+        <!-- SECTION 3: MANAGE MEMBERSHIP -->
+        <section class="vyro-member-manage">
+            <div class="vyro-member-section-heading">
+                <div>
+                    <span class="vyro-member-eyebrow">YOUR PLAN, YOUR CHOICE</span>
+                    <h3>Manage Your Membership</h3>
+                    <p>Explore other packages if your riding routine changes.</p>
+                </div>
+            </div>
+
+            <div class="vyro-member-package-grid">
+
+                <article class="vyro-member-package">
+                    <span class="vyro-member-package-label">TRY A RIDE</span>
+                    <h4>Drop-in Class</h4>
+                    <div class="vyro-member-package-price">₹399 <small>/ class</small></div>
+                    <p>Ideal for trying a session or booking an occasional ride.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> 1 cycling class</li>
+                        <li><i class="fa-solid fa-check"></i> Choose from available rides</li>
+                        <li><i class="fa-solid fa-check"></i> Instructor-led session</li>
+                    </ul>
+                    <button type="button" class="vyro-member-package-btn" data-plan="Drop-in Class" data-price="₹399">
+                        Explore Plan
+                    </button>
+                </article>
+
+                <article class="vyro-member-package vyro-member-package-featured">
+                    <span class="vyro-member-popular">CURRENT PLAN</span>
+                    <span class="vyro-member-package-label">YOUR ACTIVE PACKAGE</span>
+                    <h4>8 Class Pack</h4>
+                    <div class="vyro-member-package-price">₹2,499 <small>/ pack</small></div>
+                    <p>A flexible option for members who ride regularly.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> 8 cycling classes</li>
+                        <li><i class="fa-solid fa-check"></i> Flexible session selection</li>
+                        <li><i class="fa-solid fa-check"></i> About ₹312 per class</li>
+                    </ul>
+                    <button type="button" class="vyro-member-package-btn current" data-plan="8 Class Pack"
+                        data-price="₹2,499">
+                        Current Plan
+                    </button>
+                </article>
+
+                <article class="vyro-member-package">
+                    <span class="vyro-member-package-label">RIDE MORE</span>
+                    <h4>Monthly Membership</h4>
+                    <div class="vyro-member-package-price">₹3,499 <small>/ month</small></div>
+                    <p>For riders looking for a more regular studio routine.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Monthly membership option</li>
+                        <li><i class="fa-solid fa-check"></i> Plan around your routine</li>
+                        <li><i class="fa-solid fa-check"></i> Check full membership terms</li>
+                    </ul>
+                    <button type="button" class="vyro-member-package-btn" data-plan="Monthly Membership"
+                        data-price="₹3,499/month">
+                        Explore Plan
+                    </button>
+                </article>
+
+            </div>
+
+            <div class="vyro-member-help-banner">
+                <span class="vyro-member-help-icon"><i class="fa-regular fa-circle-question"></i></span>
+                <div>
+                    <h4>Need help choosing a plan?</h4>
+                    <p>Contact the studio to confirm package validity, renewal rules and membership terms.</p>
+                </div>
+                <a href="contact.html">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- MEMBERSHIP PLAN DETAILS MODAL -->
+    <div class="vyro-member-modal" id="vyroMemberModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroMemberModalTitle" hidden>
+        <div class="vyro-member-modal-card">
+            <span class="vyro-member-modal-icon"><i class="fa-solid fa-id-card"></i></span>
+            <span class="vyro-member-eyebrow">MEMBERSHIP DETAILS</span>
+            <h3 id="vyroMemberModalTitle">Explore This Plan</h3>
+            <p id="vyroMemberModalDescription"></p>
+            <div class="vyro-member-modal-price" id="vyroMemberModalPrice"></div>
+            <p class="vyro-member-modal-note">
+                This is a demo. Your membership will not change until the studio's membership system is connected.
+            </p>
+            <div class="vyro-member-modal-actions">
+                <button type="button" id="vyroMemberModalClose">Close</button>
+                <a href="contact.html" id="vyroMemberContact">Ask the Studio</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout confirmation modal -->
+    <div class="vyro-dash-modal" id="vyroDashLogoutModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroDashLogoutTitle" hidden>
+        <div class="vyro-dash-modal-card">
+            <div class="vyro-dash-modal-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <h2 id="vyroDashLogoutTitle">Log out of your account?</h2>
+            <p>Are you sure you want to log out of your VYRO SPIN member account?</p>
+            <div class="vyro-dash-modal-actions">
+                <button type="button" class="vyro-dash-cancel-btn" id="vyroDashLogoutNo">
+                    No, stay
+                </button>
+                <button type="button" class="vyro-dash-confirm-logout" id="vyroDashLogoutYes">
+                    Yes, log out
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

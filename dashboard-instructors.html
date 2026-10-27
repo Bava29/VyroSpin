@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/theme.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYRO SPIN</title>
+
+    <meta name="description" content="Ride stronger with VYRO SPIN, your indoor cycling and performance studio.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Fonts and Font Awesome should be in <head>
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body class="vyro-dashboard">
+
+    <!-- Fixed sidebar -->
+    <aside class="vyro-dash-sidebar" id="vyroDashSidebar">
+        <button type="button" class="vyro-dash-sidebar-close" id="vyroDashSidebarClose" aria-label="Close sidebar"
+            title="Close sidebar">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <a href="index.html" class="vyro-dash-brand">
+            <img src="images/logo-white.png" alt="VYRO SPIN"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        </a>
+
+        <div class="vyro-dash-side-label">MEMBER SPACE</div>
+
+        <nav class="vyro-dash-nav" aria-label="Dashboard navigation">
+            <a href="dashboard.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Overview</span>
+            </a>
+            <a href="my-bookings.html" class="vyro-dash-nav-link">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+            <a href="dashboard-schedule.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Class Schedule</span>
+            </a>
+            <a href="dashboard-membership.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-id-card"></i>
+                <span>Membership</span>
+            </a>
+            <a href="dashboard-instructors.html" class="vyro-dash-nav-link active">
+                <i class="fa-solid fa-users"></i>
+                <span>Instructors</span>
+            </a>
+            <a href="my-progress.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>My Progress</span>
+            </a>
+
+        </nav>
+
+        <div class="vyro-dash-sidebar-bottom">
+
+            <button type="button" class="vyro-dash-logout" id="vyroDashLogout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile/tablet overlay -->
+    <div class="vyro-dash-overlay" id="vyroDashOverlay"></div>
+
+    <!-- Fixed header -->
+    <header class="vyro-dash-header" id="vyroDashHeader">
+        <div class="vyro-dash-header-left">
+            <button type="button" class="vyro-dash-menu-toggle" id="vyroDashMenuToggle" aria-label="Toggle sidebar"
+                aria-expanded="true" aria-controls="vyroDashSidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="vyro-dash-page-heading">
+                <span>MEMBER PORTAL</span>
+                <h1>My Instructors</h1>
+            </div>
+        </div>
+
+        <div class="vyro-dash-header-right">
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashDarkToggle" aria-label="Toggle dark mode"
+                aria-pressed="false" title="Dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashRtlToggle" aria-label="Toggle RTL mode"
+                aria-pressed="false" title="RTL mode">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <div class="vyro-dash-notification-wrap">
+                <button type="button" class="vyro-dash-header-btn vyro-dash-notification-btn"
+                    id="vyroDashNotificationToggle" aria-label="Notifications, 3 unread" aria-expanded="false">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="vyro-dash-notification-badge">3</span>
+                </button>
+
+                <div class="vyro-dash-notification-panel" id="vyroDashNotificationPanel" hidden>
+                    <div class="vyro-dash-popover-heading">
+                        <strong>Notifications</strong>
+                        <span>3 new</span>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-bicycle"></i>
+                        </span>
+                        <div>
+                            <strong>Your next ride awaits</strong>
+                            <p>Explore upcoming cycling sessions.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </span>
+                        <div>
+                            <strong>Plan your next class</strong>
+                            <p>Check the latest class schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </span>
+                        <div>
+                            <strong>Keep your momentum</strong>
+                            <p>Make time for your next workout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="vyro-dash-member-profile">
+                <img src="images/member-avatar.jpg" alt="Member profile"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="vyro-dash-avatar-fallback">B</span>
+                <span class="vyro-dash-member-info">
+                    <strong>Mithra S</strong>
+                    <small>VYRO Member</small>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main dashboard area -->
+    <main class="vyro-dinst-main">
+
+
+        <!-- SECTION 1: FIND YOUR COACH -->
+        <section class="vyro-dinst-hero">
+            <div class="vyro-dinst-hero-content">
+                <span class="vyro-dinst-eyebrow">MEET YOUR TEAM</span>
+                <h1>Find Your <span>Ride Coach.</span></h1>
+                <p>
+                    Every ride has a purpose. Find a coach who matches your
+                    energy, goals, and riding style.
+                </p>
+
+                <div class="vyro-dinst-hero-stats">
+                    <div>
+                        <strong>Expert</strong>
+                        <span>Ride Coaching</span>
+                    </div>
+                    <div>
+                        <strong>4 Styles</strong>
+                        <span>To Explore</span>
+                    </div>
+                    <div>
+                        <strong>Your Pace</strong>
+                        <span>Your Progress</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vyro-dinst-hero-art">
+                <div class="vyro-dinst-hero-circle"></div>
+                <div class="vyro-dinst-hero-label">
+                    <span>YOUR RIDE.</span>
+                    <strong>YOUR ENERGY.</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: INSTRUCTOR DIRECTORY -->
+        <section class="vyro-dinst-coaches" id="vyroDinstCoaches">
+            <div class="vyro-dinst-section-heading">
+                <div>
+                    <span class="vyro-dinst-eyebrow">THE PEOPLE BEHIND THE RIDE</span>
+                    <h2>Meet Your Coaches</h2>
+                    <p>Explore each coach's style and choose the energy that suits you.</p>
+                </div>
+
+                <div class="vyro-dinst-search">
+                    <span aria-hidden="true">⌕</span>
+                    <input type="search" id="vyroDinstSearch" placeholder="Search coaches..."
+                        aria-label="Search instructors">
+                </div>
+            </div>
+
+            <div class="vyro-dinst-filters" role="group" aria-label="Filter coaches">
+                <button class="vyro-dinst-filter is-active" data-filter="all">All Coaches</button>
+                <button class="vyro-dinst-filter" data-filter="power">Power</button>
+                <button class="vyro-dinst-filter" data-filter="rhythm">Rhythm</button>
+                <button class="vyro-dinst-filter" data-filter="endurance">Endurance</button>
+                <button class="vyro-dinst-filter" data-filter="recovery">Recovery</button>
+            </div>
+
+            <div class="vyro-dinst-grid" id="vyroDinstGrid">
+
+                <article class="vyro-dinst-card" data-name="arjun" data-style="power"
+                    data-search="strength resistance power beginner advanced">
+                    <div class="vyro-dinst-card-image vyro-dinst-coach-one">
+                        <span class="vyro-dinst-coach-index">COACH / 01</span>
+                        <span class="vyro-dinst-style-tag">POWER</span>
+                        <img class="vyro-dinst-coach-photo" src="images/coach-arjun.jpg"
+                            alt="Arjun Kumar, Power and Strength Coach" loading="lazy">
+                    </div>
+                    <div class="vyro-dinst-card-body">
+                        <div class="vyro-dinst-card-title">
+                            <div>
+                                <h3>Arjun Kumar</h3>
+                                <span>Power & Strength Coach</span>
+                            </div>
+                            <span class="vyro-dinst-rating">★ 4.9</span>
+                        </div>
+                        <p>Build strength, improve resistance, and challenge your limits one ride at a time.</p>
+                        <div class="vyro-dinst-tags">
+                            <span>Resistance</span>
+                            <span>Strength</span>
+                            <span>All Levels</span>
+                        </div>
+                        <button class="vyro-dinst-view" data-coach="arjun" data-coach-name="Arjun Kumar"
+                            data-coach-style="Power & Strength"
+                            data-coach-focus="Resistance training, strength building, and controlled power intervals."
+                            data-coach-tip="Start with a resistance level you can control while maintaining good form.">
+                            View Coach Details <span>↗</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="vyro-dinst-card" data-name="priya" data-style="rhythm"
+                    data-search="music rhythm choreography energy">
+                    <div class="vyro-dinst-card-image vyro-dinst-coach-two">
+                        <span class="vyro-dinst-coach-index">COACH / 02</span>
+                        <span class="vyro-dinst-style-tag">RHYTHM</span>
+                        <img class="vyro-dinst-coach-photo" src="images/coach-priya.jpg"
+                            alt="Priya Raman, Rhythm Ride Coach" loading="lazy">
+                    </div>
+                    <div class="vyro-dinst-card-body">
+                        <div class="vyro-dinst-card-title">
+                            <div>
+                                <h3>Priya Raman</h3>
+                                <span>Rhythm Ride Coach</span>
+                            </div>
+                            <span class="vyro-dinst-rating">★ 4.9</span>
+                        </div>
+                        <p>Find your flow with music-led rides, coordinated movement, and uplifting energy.</p>
+                        <div class="vyro-dinst-tags">
+                            <span>Music</span>
+                            <span>Coordination</span>
+                            <span>Energy</span>
+                        </div>
+                        <button class="vyro-dinst-view" data-coach="priya" data-coach-name="Priya Raman"
+                            data-coach-style="Rhythm Ride"
+                            data-coach-focus="Music-led cycling, rhythm, coordination, and motivating ride sessions."
+                            data-coach-tip="Enjoy the music and focus on comfortable movement before trying complex choreography.">
+                            View Coach Details <span>↗</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="vyro-dinst-card" data-name="karthik" data-style="endurance"
+                    data-search="stamina endurance cardio steady pace">
+                    <div class="vyro-dinst-card-image vyro-dinst-coach-three">
+                        <span class="vyro-dinst-coach-index">COACH / 03</span>
+                        <span class="vyro-dinst-style-tag">ENDURANCE</span>
+                        <img class="vyro-dinst-coach-photo" src="images/coach-karthik.jpg"
+                            alt="Karthik Raj, Endurance Coach" loading="lazy">
+                    </div>
+                    <div class="vyro-dinst-card-body">
+                        <div class="vyro-dinst-card-title">
+                            <div>
+                                <h3>Karthik Raj</h3>
+                                <span>Endurance Coach</span>
+                            </div>
+                            <span class="vyro-dinst-rating">★ 4.8</span>
+                        </div>
+                        <p>Develop stamina through steady pacing, sustained effort, and progressive challenges.</p>
+                        <div class="vyro-dinst-tags">
+                            <span>Stamina</span>
+                            <span>Pacing</span>
+                            <span>Cardio</span>
+                        </div>
+                        <button class="vyro-dinst-view" data-coach="karthik" data-coach-name="Karthik Raj"
+                            data-coach-style="Endurance"
+                            data-coach-focus="Steady-state cycling, pacing, stamina, and progressive effort."
+                            data-coach-tip="Keep a sustainable pace and build duration gradually instead of starting too fast.">
+                            View Coach Details <span>↗</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="vyro-dinst-card" data-name="meera" data-style="recovery"
+                    data-search="recovery mobility low intensity beginner">
+                    <div class="vyro-dinst-card-image vyro-dinst-coach-four">
+                        <span class="vyro-dinst-coach-index">COACH / 04</span>
+                        <span class="vyro-dinst-style-tag">RESET</span>
+                        <img class="vyro-dinst-coach-photo" src="images/coach-meera.jpg"
+                            alt="Meera Nair, Reset Ride Coach" loading="lazy">
+                    </div>
+                    <div class="vyro-dinst-card-body">
+                        <div class="vyro-dinst-card-title">
+                            <div>
+                                <h3>Meera Nair</h3>
+                                <span>Reset Ride Coach</span>
+                            </div>
+                            <span class="vyro-dinst-rating">★ 4.8</span>
+                        </div>
+                        <p>Enjoy a gentler ride focused on comfortable movement, controlled effort, and recovery.</p>
+                        <div class="vyro-dinst-tags">
+                            <span>Low Impact</span>
+                            <span>Mobility</span>
+                            <span>Reset</span>
+                        </div>
+                        <button class="vyro-dinst-view" data-coach="meera" data-coach-name="Meera Nair"
+                            data-coach-style="Reset & Recovery"
+                            data-coach-focus="Gentler cycling, comfortable pacing, and recovery-focused movement."
+                            data-coach-tip="Keep the resistance comfortable and reduce effort whenever you need to.">
+                            View Coach Details <span>↗</span>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="vyro-dinst-empty" id="vyroDinstEmpty" hidden>
+                <span>⌕</span>
+                <h3>No coaches found</h3>
+                <p>Try another name or select a different coaching style.</p>
+                <button type="button" id="vyroDinstReset">Show All Coaches</button>
+            </div>
+            <p class="vyro-dinst-demo-note">
+                Demo instructor profiles and ratings — replace with your studio's verified details.
+            </p>
+        </section>
+
+        <!-- SECTION 3: COACHING STYLE + UPCOMING RIDES -->
+        <section class="vyro-dinst-discover">
+            <div class="vyro-dinst-section-heading">
+                <div>
+                    <span class="vyro-dinst-eyebrow">YOUR NEXT RIDE STARTS HERE</span>
+                    <h2>Find Your Coaching Style</h2>
+                    <p>Choose a ride based on how you want to feel and what you want to work on.</p>
+                </div>
+            </div>
+
+            <div class="vyro-dinst-style-grid">
+                <article class="vyro-dinst-style-card">
+                    <span class="vyro-dinst-style-number">01 / BUILD</span>
+                    <div class="vyro-dinst-style-icon">↗</div>
+                    <h3>Power Ride</h3>
+                    <p>For riders who want to work on resistance, strength, and controlled bursts of effort.</p>
+                    <span class="vyro-dinst-recommended">COACH: ARJUN</span>
+                </article>
+
+                <article class="vyro-dinst-style-card">
+                    <span class="vyro-dinst-style-number">02 / FEEL</span>
+                    <div class="vyro-dinst-style-icon">♫</div>
+                    <h3>Rhythm Ride</h3>
+                    <p>For music lovers who enjoy movement, rhythm, and an energetic group atmosphere.</p>
+                    <span class="vyro-dinst-recommended">COACH: PRIYA</span>
+                </article>
+
+                <article class="vyro-dinst-style-card">
+                    <span class="vyro-dinst-style-number">03 / LAST</span>
+                    <div class="vyro-dinst-style-icon">⌁</div>
+                    <h3>Endurance Ride</h3>
+                    <p>For riders developing stamina through steady effort and sustainable pacing.</p>
+                    <span class="vyro-dinst-recommended">COACH: KARTHIK</span>
+                </article>
+
+                <article class="vyro-dinst-style-card">
+                    <span class="vyro-dinst-style-number">04 / RESET</span>
+                    <div class="vyro-dinst-style-icon">○</div>
+                    <h3>Reset Ride</h3>
+                    <p>For riders who prefer a gentler session or a lower-intensity cycling experience.</p>
+                    <span class="vyro-dinst-recommended">COACH: MEERA</span>
+                </article>
+            </div>
+
+            <div class="vyro-dinst-next-ride">
+                <div>
+                    <span class="vyro-dinst-eyebrow">READY WHEN YOU ARE</span>
+                    <h3>Found your coach?</h3>
+                    <p>Explore available sessions and check class times before choosing your next ride.</p>
+                </div>
+                <a href="dashboard-schedule.html" class="vyro-dinst-schedule-btn">
+                    Explore Class Schedule <span>↗</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- COACH DETAILS MODAL -->
+    <div class="vyro-dinst-modal" id="vyroDinstModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroDinstModalName" hidden>
+        <div class="vyro-dinst-modal-panel">
+            <button type="button" class="vyro-dinst-modal-close" id="vyroDinstModalClose"
+                aria-label="Close coach details">×</button>
+
+            <span class="vyro-dinst-eyebrow">MEET YOUR COACH</span>
+            <div class="vyro-dinst-modal-avatar" id="vyroDinstModalAvatar">A</div>
+            <h2 id="vyroDinstModalName">Coach Name</h2>
+            <p class="vyro-dinst-modal-style" id="vyroDinstModalStyle">Coaching Style</p>
+
+            <div class="vyro-dinst-modal-info">
+                <span>COACHING FOCUS</span>
+                <p id="vyroDinstModalFocus"></p>
+            </div>
+
+            <div class="vyro-dinst-modal-info">
+                <span>FIRST RIDE TIP</span>
+                <p id="vyroDinstModalTip"></p>
+            </div>
+
+            <a href="dashboard-schedule.html" class="vyro-dinst-schedule-btn vyro-dinst-modal-cta">
+                Find a Class with This Style <span>↗</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Logout confirmation modal -->
+    <div class="vyro-dash-modal" id="vyroDashLogoutModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroDashLogoutTitle" hidden>
+        <div class="vyro-dash-modal-card">
+            <div class="vyro-dash-modal-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <h2 id="vyroDashLogoutTitle">Log out of your account?</h2>
+            <p>Are you sure you want to log out of your VYRO SPIN member account?</p>
+            <div class="vyro-dash-modal-actions">
+                <button type="button" class="vyro-dash-cancel-btn" id="vyroDashLogoutNo">
+                    No, stay
+                </button>
+                <button type="button" class="vyro-dash-confirm-logout" id="vyroDashLogoutYes">
+                    Yes, log out
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/theme.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYRO SPIN</title>
+
+    <meta name="description" content="Ride stronger with VYRO SPIN, your indoor cycling and performance studio.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Fonts and Font Awesome should be in <head>
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body class="vyro-dashboard">
+
+    <!-- Fixed sidebar -->
+    <aside class="vyro-dash-sidebar" id="vyroDashSidebar">
+        <button type="button" class="vyro-dash-sidebar-close" id="vyroDashSidebarClose" aria-label="Close sidebar"
+            title="Close sidebar">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <a href="index.html" class="vyro-dash-brand">
+            <img src="images/logo-white.png" alt="VYRO SPIN"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        </a>
+
+        <div class="vyro-dash-side-label">MEMBER SPACE</div>
+
+        <nav class="vyro-dash-nav" aria-label="Dashboard navigation">
+            <a href="dashboard.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Overview</span>
+            </a>
+            <a href="my-bookings.html" class="vyro-dash-nav-link">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+            <a href="dashboard-schedule.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Class Schedule</span>
+            </a>
+            <a href="dashboard-membership.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-id-card"></i>
+                <span>Membership</span>
+            </a>
+            <a href="dashboard-instructors.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Instructors</span>
+            </a>
+            <a href="my-progress.html" class="vyro-dash-nav-link active">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>My Progress</span>
+            </a>
+
+        </nav>
+
+        <div class="vyro-dash-sidebar-bottom">
+
+            <button type="button" class="vyro-dash-logout" id="vyroDashLogout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile/tablet overlay -->
+    <div class="vyro-dash-overlay" id="vyroDashOverlay"></div>
+
+    <!-- Fixed header -->
+    <header class="vyro-dash-header" id="vyroDashHeader">
+        <div class="vyro-dash-header-left">
+            <button type="button" class="vyro-dash-menu-toggle" id="vyroDashMenuToggle" aria-label="Toggle sidebar"
+                aria-expanded="true" aria-controls="vyroDashSidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="vyro-dash-page-heading">
+                <span>MEMBER PORTAL</span>
+                <h1>My Progress</h1>
+            </div>
+        </div>
+
+        <div class="vyro-dash-header-right">
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashDarkToggle" aria-label="Toggle dark mode"
+                aria-pressed="false" title="Dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashRtlToggle" aria-label="Toggle RTL mode"
+                aria-pressed="false" title="RTL mode">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <div class="vyro-dash-notification-wrap">
+                <button type="button" class="vyro-dash-header-btn vyro-dash-notification-btn"
+                    id="vyroDashNotificationToggle" aria-label="Notifications, 3 unread" aria-expanded="false">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="vyro-dash-notification-badge">3</span>
+                </button>
+
+                <div class="vyro-dash-notification-panel" id="vyroDashNotificationPanel" hidden>
+                    <div class="vyro-dash-popover-heading">
+                        <strong>Notifications</strong>
+                        <span>3 new</span>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-bicycle"></i>
+                        </span>
+                        <div>
+                            <strong>Your next ride awaits</strong>
+                            <p>Explore upcoming cycling sessions.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </span>
+                        <div>
+                            <strong>Plan your next class</strong>
+                            <p>Check the latest class schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </span>
+                        <div>
+                            <strong>Keep your momentum</strong>
+                            <p>Make time for your next workout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="vyro-dash-member-profile">
+                <img src="images/member-avatar.jpg" alt="Member profile"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="vyro-dash-avatar-fallback">B</span>
+                <span class="vyro-dash-member-info">
+                    <strong>Member Name</strong>
+                    <small>VYRO Member</small>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main dashboard area -->
+    <main class="vyro-dash-main vyro-progress-main">
+
+        <!-- SECTION 1: RIDE STATS -->
+        <section class="vyro-progress-hero">
+            <div class="vyro-progress-hero-content">
+                <span class="vyro-progress-eyebrow">YOUR FITNESS JOURNEY</span>
+                <h2>Every Ride Makes You <span>Stronger.</span></h2>
+                <p>
+                    Track your consistency, celebrate your milestones,
+                    and see how far you have come with VYRO SPIN.
+                </p>
+
+                <a href="dashboard-schedule.html" class="vyro-progress-primary-btn">
+                    <i class="fa-solid fa-bicycle"></i>
+                    Book Your Next Ride
+                </a>
+            </div>
+
+            <div class="vyro-progress-hero-art" aria-hidden="true">
+                <div class="vyro-progress-hero-ring">
+                    <i class="fa-solid fa-person-biking"></i>
+                    <span>KEEP MOVING</span>
+                    <strong>VYRO</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="vyro-progress-stats-section">
+            <div class="vyro-progress-section-heading">
+                <div>
+                    <span class="vyro-progress-eyebrow">YOUR PERFORMANCE</span>
+                    <h3>Your Ride Stats</h3>
+                    <p>A quick look at your riding journey.</p>
+                </div>
+                <span class="vyro-progress-demo-label">SAMPLE DATA</span>
+            </div>
+
+            <div class="vyro-progress-stats-grid">
+
+                <article class="vyro-progress-stat-card">
+                    <div class="vyro-progress-stat-top">
+                        <span>Total Rides</span>
+                        <span class="vyro-progress-stat-icon">
+                            <i class="fa-solid fa-bicycle"></i>
+                        </span>
+                    </div>
+                    <strong>24</strong>
+                    <p>Classes completed</p>
+                </article>
+
+                <article class="vyro-progress-stat-card">
+                    <div class="vyro-progress-stat-top">
+                        <span>Ride Time</span>
+                        <span class="vyro-progress-stat-icon">
+                            <i class="fa-regular fa-clock"></i>
+                        </span>
+                    </div>
+                    <strong>720 <small>min</small></strong>
+                    <p>12 hours in the saddle</p>
+                </article>
+
+                <article class="vyro-progress-stat-card vyro-progress-stat-featured">
+                    <div class="vyro-progress-stat-top">
+                        <span>Current Streak</span>
+                        <span class="vyro-progress-stat-icon">
+                            <i class="fa-solid fa-fire"></i>
+                        </span>
+                    </div>
+                    <strong>3 <small>days</small></strong>
+                    <p>Keep your momentum going</p>
+                </article>
+
+                <article class="vyro-progress-stat-card">
+                    <div class="vyro-progress-stat-top">
+                        <span>Achievements</span>
+                        <span class="vyro-progress-stat-icon">
+                            <i class="fa-solid fa-medal"></i>
+                        </span>
+                    </div>
+                    <strong>4</strong>
+                    <p>Milestones unlocked</p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION 2: GOALS AND ACTIVITY -->
+        <section class="vyro-progress-goals-section">
+
+            <div class="vyro-progress-goals-panel">
+                <div class="vyro-progress-section-heading">
+                    <div>
+                        <span class="vyro-progress-eyebrow">STAY CONSISTENT</span>
+                        <h3>Your Weekly Goal</h3>
+                        <p>Set a target that fits your routine.</p>
+                    </div>
+                    <span class="vyro-progress-goal-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </span>
+                </div>
+
+                <div class="vyro-progress-goal-summary">
+                    <div>
+                        <span>Classes this week</span>
+                        <strong><span id="vyroProgressCompleted">2</span> / <span
+                                id="vyroProgressTarget">3</span></strong>
+                    </div>
+                    <span class="vyro-progress-goal-percent" id="vyroProgressPercent">67%</span>
+                </div>
+
+                <div class="vyro-progress-goal-track" id="vyroProgressGoalTrack" role="progressbar"
+                    aria-label="Weekly class goal progress" aria-valuemin="0" aria-valuemax="3" aria-valuenow="2">
+                    <span id="vyroProgressGoalBar"></span>
+                </div>
+
+                <p class="vyro-progress-goal-message" id="vyroProgressGoalMessage">
+                    One more ride to reach your weekly goal. You've got this!
+                </p>
+
+                <div class="vyro-progress-goal-controls">
+                    <label for="vyroProgressGoalSelect">Weekly class target</label>
+                    <select id="vyroProgressGoalSelect">
+                        <option value="2">2 classes</option>
+                        <option value="3" selected>3 classes</option>
+                        <option value="4">4 classes</option>
+                        <option value="5">5 classes</option>
+                        <option value="6">6 classes</option>
+                    </select>
+                    <button type="button" class="vyro-progress-update-btn" id="vyroProgressUpdateGoal">
+                        Update Goal
+                    </button>
+                </div>
+                <p class="vyro-progress-goal-note">
+                    Your target is a personal goal, not a medical or fitness prescription.
+                </p>
+            </div>
+
+            <div class="vyro-progress-activity-panel">
+                <div class="vyro-progress-section-heading">
+                    <div>
+                        <span class="vyro-progress-eyebrow">YOUR ROUTINE</span>
+                        <h3>Weekly Activity</h3>
+                        <p>Example of a balanced riding week.</p>
+                    </div>
+                </div>
+
+                <div class="vyro-progress-week-bars" aria-label="Sample weekly activity chart">
+                    <div class="vyro-progress-day">
+                        <div class="vyro-progress-bar-wrap"><span style="height: 45%"></span></div>
+                        <strong>1</strong>
+                        <small>Mon</small>
+                    </div>
+                    <div class="vyro-progress-day">
+                        <div class="vyro-progress-bar-wrap"><span style="height: 75%"></span></div>
+                        <strong>2</strong>
+                        <small>Tue</small>
+                    </div>
+                    <div class="vyro-progress-day">
+                        <div class="vyro-progress-bar-wrap"><span style="height: 0%"></span></div>
+                        <strong>0</strong>
+                        <small>Wed</small>
+                    </div>
+                    <div class="vyro-progress-day">
+                        <div class="vyro-progress-bar-wrap"><span style="height: 55%"></span></div>
+                        <strong>1</strong>
+                        <small>Thu</small>
+                    </div>
+                    <div class="vyro-progress-day">
+                        <div class="vyro-progress-bar-wrap"><span style="height: 0%"></span></div>
+                        <strong>0</strong>
+                        <small>Fri</small>
+                    </div>
+                    <div class="vyro-progress-day">
+                        <div class="vyro-progress-bar-wrap"><span style="height: 90%"></span></div>
+                        <strong>2</strong>
+                        <small>Sat</small>
+                    </div>
+                    <div class="vyro-progress-day">
+                        <div class="vyro-progress-bar-wrap"><span style="height: 0%"></span></div>
+                        <strong>0</strong>
+                        <small>Sun</small>
+                    </div>
+                </div>
+
+                <div class="vyro-progress-activity-legend">
+                    <span><i></i> Sample completed rides</span>
+                    <a href="my-bookings.html">View Bookings <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 3: ACHIEVEMENTS AND RIDE HISTORY -->
+        <section class="vyro-progress-history-section">
+
+            <div class="vyro-progress-achievements-panel">
+                <div class="vyro-progress-section-heading">
+                    <div>
+                        <span class="vyro-progress-eyebrow">CELEBRATE YOUR EFFORT</span>
+                        <h3>Your Achievements</h3>
+                        <p>Every milestone starts with showing up.</p>
+                    </div>
+                </div>
+
+                <div class="vyro-progress-achievements-grid">
+
+                    <article class="vyro-progress-achievement">
+                        <span class="vyro-progress-achievement-icon">
+                            <i class="fa-solid fa-flag-checkered"></i>
+                        </span>
+                        <div>
+                            <strong>First Finish</strong>
+                            <p>Completed your first ride</p>
+                            <span class="vyro-progress-earned">UNLOCKED</span>
+                        </div>
+                    </article>
+
+                    <article class="vyro-progress-achievement">
+                        <span class="vyro-progress-achievement-icon">
+                            <i class="fa-solid fa-fire"></i>
+                        </span>
+                        <div>
+                            <strong>Consistency Starter</strong>
+                            <p>Rode on 3 consecutive days</p>
+                            <span class="vyro-progress-earned">UNLOCKED</span>
+                        </div>
+                    </article>
+
+                    <article class="vyro-progress-achievement">
+                        <span class="vyro-progress-achievement-icon">
+                            <i class="fa-solid fa-medal"></i>
+                        </span>
+                        <div>
+                            <strong>10 Ride Club</strong>
+                            <p>Completed 10 cycling classes</p>
+                            <span class="vyro-progress-earned">UNLOCKED</span>
+                        </div>
+                    </article>
+
+                    <article class="vyro-progress-achievement vyro-progress-achievement-locked">
+                        <span class="vyro-progress-achievement-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <div>
+                            <strong>Ride Regular</strong>
+                            <p>Complete 30 rides to unlock</p>
+                            <span class="vyro-progress-locked">24 / 30 RIDES</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+
+            <div class="vyro-progress-history-panel">
+                <div class="vyro-progress-section-heading">
+                    <div>
+                        <span class="vyro-progress-eyebrow">KEEP MOVING FORWARD</span>
+                        <h3>Recent Rides</h3>
+                        <p>Your latest completed sessions.</p>
+                    </div>
+                    <a href="my-bookings.html" class="vyro-progress-view-all">
+                        All Bookings <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="vyro-progress-ride-row">
+                    <span class="vyro-progress-ride-icon"><i class="fa-solid fa-bolt"></i></span>
+                    <div class="vyro-progress-ride-details">
+                        <strong>Power Ride</strong>
+                        <span>Coach Arjun · 45 minutes</span>
+                    </div>
+                    <span class="vyro-progress-ride-status">Completed</span>
+                </div>
+
+                <div class="vyro-progress-ride-row">
+                    <span class="vyro-progress-ride-icon"><i class="fa-solid fa-music"></i></span>
+                    <div class="vyro-progress-ride-details">
+                        <strong>Rhythm Ride</strong>
+                        <span>Coach Priya · 45 minutes</span>
+                    </div>
+                    <span class="vyro-progress-ride-status">Completed</span>
+                </div>
+
+                <div class="vyro-progress-ride-row">
+                    <span class="vyro-progress-ride-icon"><i class="fa-solid fa-mountain"></i></span>
+                    <div class="vyro-progress-ride-details">
+                        <strong>Endurance Ride</strong>
+                        <span>Coach Karthik · 50 minutes</span>
+                    </div>
+                    <span class="vyro-progress-ride-status">Completed</span>
+                </div>
+
+                <a href="dashboard-schedule.html" class="vyro-progress-secondary-btn">
+                    Explore More Classes <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Logout confirmation modal -->
+    <div class="vyro-dash-modal" id="vyroDashLogoutModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroDashLogoutTitle" hidden>
+        <div class="vyro-dash-modal-card">
+            <div class="vyro-dash-modal-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <h2 id="vyroDashLogoutTitle">Log out of your account?</h2>
+            <p>Are you sure you want to log out of your VYRO SPIN member account?</p>
+            <div class="vyro-dash-modal-actions">
+                <button type="button" class="vyro-dash-cancel-btn" id="vyroDashLogoutNo">
+                    No, stay
+                </button>
+                <button type="button" class="vyro-dash-confirm-logout" id="vyroDashLogoutYes">
+                    Yes, log out
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

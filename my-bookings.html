@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/theme.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYRO SPIN</title>
+
+    <meta name="description" content="Ride stronger with VYRO SPIN, your indoor cycling and performance studio.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Fonts and Font Awesome should be in <head>
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body class="vyro-dashboard">
+
+    <!-- Fixed sidebar -->
+    <aside class="vyro-dash-sidebar" id="vyroDashSidebar">
+        <button type="button" class="vyro-dash-sidebar-close" id="vyroDashSidebarClose" aria-label="Close sidebar"
+            title="Close sidebar">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <a href="index.html" class="vyro-dash-brand">
+            <img src="images/logo-white.png" alt="VYRO SPIN"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        </a>
+
+        <div class="vyro-dash-side-label">MEMBER SPACE</div>
+
+        <nav class="vyro-dash-nav" aria-label="Dashboard navigation">
+            <a href="dashboard.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Overview</span>
+            </a>
+            <a href="my-bookings.html" class="vyro-dash-nav-link active">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+            <a href="dashboard-schedule.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Class Schedule</span>
+            </a>
+            <a href="dashboard-membership.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-id-card"></i>
+                <span>Membership</span>
+            </a>
+            <a href="dashboard-instructors.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Instructors</span>
+            </a>
+            <a href="my-progress.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>My Progress</span>
+            </a>
+
+        </nav>
+
+        <div class="vyro-dash-sidebar-bottom">
+
+            <button type="button" class="vyro-dash-logout" id="vyroDashLogout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile/tablet overlay -->
+    <div class="vyro-dash-overlay" id="vyroDashOverlay"></div>
+
+    <!-- Fixed header -->
+    <header class="vyro-dash-header" id="vyroDashHeader">
+        <div class="vyro-dash-header-left">
+            <button type="button" class="vyro-dash-menu-toggle" id="vyroDashMenuToggle" aria-label="Toggle sidebar"
+                aria-expanded="true" aria-controls="vyroDashSidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="vyro-dash-page-heading">
+                <span>MEMBER PORTAL</span>
+                <h1>My Bookings</h1>
+            </div>
+        </div>
+
+        <div class="vyro-dash-header-right">
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashDarkToggle" aria-label="Toggle dark mode"
+                aria-pressed="false" title="Dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashRtlToggle" aria-label="Toggle RTL mode"
+                aria-pressed="false" title="RTL mode">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <div class="vyro-dash-notification-wrap">
+                <button type="button" class="vyro-dash-header-btn vyro-dash-notification-btn"
+                    id="vyroDashNotificationToggle" aria-label="Notifications, 3 unread" aria-expanded="false">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="vyro-dash-notification-badge">3</span>
+                </button>
+
+                <div class="vyro-dash-notification-panel" id="vyroDashNotificationPanel" hidden>
+                    <div class="vyro-dash-popover-heading">
+                        <strong>Notifications</strong>
+                        <span>3 new</span>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-bicycle"></i>
+                        </span>
+                        <div>
+                            <strong>Your next ride awaits</strong>
+                            <p>Explore upcoming cycling sessions.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </span>
+                        <div>
+                            <strong>Plan your next class</strong>
+                            <p>Check the latest class schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </span>
+                        <div>
+                            <strong>Keep your momentum</strong>
+                            <p>Make time for your next workout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="vyro-dash-member-profile">
+                <img src="images/member-avatar.jpg" alt="Member profile"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="vyro-dash-avatar-fallback">B</span>
+                <span class="vyro-dash-member-info">
+                    <strong>Member Name</strong>
+                    <small>VYRO Member</small>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main dashboard area -->
+
+    <main class="vyro-bookings-main">
+
+        <!-- SECTION 1: BOOKING OVERVIEW -->
+        <section class="vyro-bookings-welcome">
+            <div>
+                <span class="vyro-bookings-eyebrow">YOUR RIDE JOURNEY</span>
+                <h2>My <span>Bookings</span></h2>
+                <p>Manage your rides, keep track of your sessions and make time for your next great workout.</p>
+            </div>
+            <a href="dashboard-schedule.html" class="vyro-bookings-primary-btn">
+                <i class="fa-solid fa-plus"></i> Book a New Class
+            </a>
+        </section>
+
+        <section class="vyro-bookings-stats" aria-label="Booking summary">
+            <button type="button" class="vyro-bookings-stat active" data-filter="upcoming">
+                <span class="vyro-bookings-stat-icon"><i class="fa-regular fa-calendar-check"></i></span>
+                <span class="vyro-bookings-stat-label">Upcoming</span>
+                <strong id="vyroBookingsUpcomingCount">2</strong>
+                <small>Scheduled rides</small>
+            </button>
+
+            <button type="button" class="vyro-bookings-stat" data-filter="completed">
+                <span class="vyro-bookings-stat-icon"><i class="fa-solid fa-circle-check"></i></span>
+                <span class="vyro-bookings-stat-label">Completed</span>
+                <strong id="vyroBookingsCompletedCount">1</strong>
+                <small>Finished rides</small>
+            </button>
+
+            <button type="button" class="vyro-bookings-stat" data-filter="cancelled">
+                <span class="vyro-bookings-stat-icon"><i class="fa-solid fa-calendar-xmark"></i></span>
+                <span class="vyro-bookings-stat-label">Cancelled</span>
+                <strong id="vyroBookingsCancelledCount">0</strong>
+                <small>Cancelled rides</small>
+            </button>
+        </section>
+
+
+        <!-- SECTION 2: MANAGE BOOKINGS -->
+        <section class="vyro-bookings-panel">
+            <div class="vyro-bookings-section-heading">
+                <div>
+                    <span class="vyro-bookings-eyebrow">YOUR SESSIONS</span>
+                    <h3>Manage My Rides</h3>
+                </div>
+                <span class="vyro-bookings-total" id="vyroBookingsResultCount">2 bookings</span>
+            </div>
+
+            <div class="vyro-bookings-controls">
+                <label class="vyro-bookings-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="vyroBookingsSearch" placeholder="Search class or instructor..."
+                        aria-label="Search bookings">
+                </label>
+
+                <select id="vyroBookingsFilter" aria-label="Filter bookings by status">
+                    <option value="all">All Bookings</option>
+                    <option value="upcoming" selected>Upcoming</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+
+                <select id="vyroBookingsSort" aria-label="Sort bookings">
+                    <option value="date-asc">Date: Earliest first</option>
+                    <option value="date-desc">Date: Latest first</option>
+                    <option value="name-asc">Class: A–Z</option>
+                </select>
+            </div>
+
+            <div class="vyro-bookings-list" id="vyroBookingsList" aria-live="polite">
+
+                <article class="vyro-booking-card" data-id="BK1001" data-status="upcoming" data-date="2026-11-02"
+                    data-class="Power & Performance" data-instructor="Coach Alex" data-time="06:30 AM"
+                    data-type="Power Ride">
+
+                    <div class="vyro-booking-date">
+                        <span>NOV</span>
+                        <strong>02</strong>
+                        <small>MON</small>
+                    </div>
+
+                    <div class="vyro-booking-details">
+                        <span class="vyro-booking-type">POWER RIDE</span>
+                        <h4>Power & Performance</h4>
+                        <p><i class="fa-regular fa-clock"></i> 06:30 AM</p>
+                        <p><i class="fa-solid fa-user"></i> Coach Alex</p>
+                        <small class="vyro-booking-id">Booking ID: BK1001</small>
+                    </div>
+
+                    <div class="vyro-booking-card-actions">
+                        <span class="vyro-booking-status upcoming">Upcoming</span>
+                        <button type="button" class="vyro-booking-cancel" data-cancel="BK1001">Cancel Booking</button>
+                    </div>
+                </article>
+
+                <article class="vyro-booking-card" data-id="BK1002" data-status="upcoming" data-date="2026-11-04"
+                    data-class="Rhythm Ride" data-instructor="Coach Maya" data-time="07:30 AM" data-type="Rhythm Ride">
+
+                    <div class="vyro-booking-date">
+                        <span>NOV</span>
+                        <strong>04</strong>
+                        <small>WED</small>
+                    </div>
+
+                    <div class="vyro-booking-details">
+                        <span class="vyro-booking-type">RHYTHM RIDE</span>
+                        <h4>Ride to the Rhythm</h4>
+                        <p><i class="fa-regular fa-clock"></i> 07:30 AM</p>
+                        <p><i class="fa-solid fa-user"></i> Coach Maya</p>
+                        <small class="vyro-booking-id">Booking ID: BK1002</small>
+                    </div>
+
+                    <div class="vyro-booking-card-actions">
+                        <span class="vyro-booking-status upcoming">Upcoming</span>
+                        <button type="button" class="vyro-booking-cancel" data-cancel="BK1002">Cancel Booking</button>
+                    </div>
+                </article>
+
+                <article class="vyro-booking-card" data-id="BK1003" data-status="completed" data-date="2026-10-20"
+                    data-class="Endurance Ride" data-instructor="Coach Jordan" data-time="06:00 AM"
+                    data-type="Endurance Ride">
+
+                    <div class="vyro-booking-date">
+                        <span>OCT</span>
+                        <strong>20</strong>
+                        <small>TUE</small>
+                    </div>
+
+                    <div class="vyro-booking-details">
+                        <span class="vyro-booking-type">ENDURANCE RIDE</span>
+                        <h4>Build Your Stamina</h4>
+                        <p><i class="fa-regular fa-clock"></i> 06:00 AM</p>
+                        <p><i class="fa-solid fa-user"></i> Coach Jordan</p>
+                        <small class="vyro-booking-id">Booking ID: BK1003</small>
+                    </div>
+
+                    <div class="vyro-booking-card-actions">
+                        <span class="vyro-booking-status completed">Completed</span>
+                        <span class="vyro-booking-complete-note">
+                            <i class="fa-solid fa-check"></i> Ride completed
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="vyro-bookings-empty" id="vyroBookingsEmpty" hidden>
+                <i class="fa-regular fa-calendar-xmark"></i>
+                <h4>No bookings found</h4>
+                <p>Try another filter or book your next ride.</p>
+                <a href="dashboard-schedule.html" class="vyro-bookings-primary-btn">
+                    Explore Classes
+                </a>
+            </div>
+        </section>
+
+
+        <!-- SECTION 3: DISCOVER YOUR NEXT RIDE -->
+        <section class="vyro-bookings-discover">
+            <div class="vyro-bookings-discover-heading">
+                <div>
+                    <span class="vyro-bookings-eyebrow">KEEP YOUR MOMENTUM</span>
+                    <h3>Find Your Next Ride</h3>
+                    <p>Choose a class that matches your energy and your goals.</p>
+                </div>
+                <a href="dashboard-schedule.html" class="vyro-bookings-text-link">
+                    Full Schedule <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="vyro-bookings-class-grid">
+
+                <article class="vyro-bookings-class-card">
+                    <div class="vyro-bookings-class-icon power">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <span class="vyro-bookings-class-tag">HIGH INTENSITY</span>
+                    <h4>Power Ride</h4>
+                    <p>Build strength and challenge your limits with powerful intervals.</p>
+                    <div class="vyro-bookings-class-meta">
+                        <span><i class="fa-regular fa-clock"></i> 45 min</span>
+                        <span><i class="fa-solid fa-fire"></i> High energy</span>
+                    </div>
+                    <button type="button" class="vyro-bookings-class-btn" data-class-choice="Power Ride">Choose This
+                        Ride <i class="fa-solid fa-arrow-right"></i></button>
+                </article>
+
+                <article class="vyro-bookings-class-card">
+                    <div class="vyro-bookings-class-icon rhythm">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <span class="vyro-bookings-class-tag">MUSIC & MOVEMENT</span>
+                    <h4>Rhythm Ride</h4>
+                    <p>Find your flow with music-led movement and an energising atmosphere.</p>
+                    <div class="vyro-bookings-class-meta">
+                        <span><i class="fa-regular fa-clock"></i> 45 min</span>
+                        <span><i class="fa-solid fa-headphones"></i> Music-led</span>
+                    </div>
+                    <button type="button" class="vyro-bookings-class-btn" data-class-choice="Rhythm Ride">Choose This
+                        Ride <i class="fa-solid fa-arrow-right"></i></button>
+                </article>
+
+                <article class="vyro-bookings-class-card">
+                    <div class="vyro-bookings-class-icon endurance">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <span class="vyro-bookings-class-tag">STEADY & STRONG</span>
+                    <h4>Endurance Ride</h4>
+                    <p>Improve stamina with a steady ride focused on consistency.</p>
+                    <div class="vyro-bookings-class-meta">
+                        <span><i class="fa-regular fa-clock"></i> 45 min</span>
+                        <span><i class="fa-solid fa-gauge-high"></i> Steady pace</span>
+                    </div>
+                    <button type="button" class="vyro-bookings-class-btn" data-class-choice="Endurance Ride">Choose This
+                        Ride <i class="fa-solid fa-arrow-right"></i></button>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- CANCEL BOOKING CONFIRMATION -->
+    <div class="vyro-bookings-modal" id="vyroBookingsCancelModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroBookingsCancelTitle" hidden>
+        <div class="vyro-bookings-modal-card">
+            <span class="vyro-bookings-modal-icon">
+                <i class="fa-solid fa-calendar-xmark"></i>
+            </span>
+            <h3 id="vyroBookingsCancelTitle">Cancel this booking?</h3>
+            <p id="vyroBookingsCancelMessage">
+                Are you sure you want to cancel this ride?
+            </p>
+            <div class="vyro-bookings-modal-actions">
+                <button type="button" id="vyroBookingsKeepBtn">Keep Booking</button>
+                <button type="button" id="vyroBookingsConfirmCancel">Yes, Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CLASS CHOICE MODAL -->
+    <div class="vyro-bookings-modal" id="vyroBookingsClassModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroBookingsClassTitle" hidden>
+        <div class="vyro-bookings-modal-card">
+            <span class="vyro-bookings-modal-icon class">
+                <i class="fa-solid fa-bicycle"></i>
+            </span>
+            <h3 id="vyroBookingsClassTitle">Ready for your next ride?</h3>
+            <p id="vyroBookingsClassMessage">Choose a class to continue.</p>
+            <div class="vyro-bookings-modal-actions">
+                <button type="button" id="vyroBookingsClassClose">Not Now</button>
+                <a href="dashboard-schedule.html" id="vyroBookingsContinue" class="vyro-bookings-modal-continue">
+                    Choose Date & Time
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Logout confirmation modal -->
+    <div class="vyro-dash-modal" id="vyroDashLogoutModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroDashLogoutTitle" hidden>
+        <div class="vyro-dash-modal-card">
+            <div class="vyro-dash-modal-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <h2 id="vyroDashLogoutTitle">Log out of your account?</h2>
+            <p>Are you sure you want to log out of your VYRO SPIN member account?</p>
+            <div class="vyro-dash-modal-actions">
+                <button type="button" class="vyro-dash-cancel-btn" id="vyroDashLogoutNo">
+                    No, stay
+                </button>
+                <button type="button" class="vyro-dash-confirm-logout" id="vyroDashLogoutYes">
+                    Yes, log out
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

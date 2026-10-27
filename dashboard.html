@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/theme.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYRO SPIN</title>
+
+    <meta name="description" content="Ride stronger with VYRO SPIN, your indoor cycling and performance studio.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Fonts and Font Awesome should be in <head>
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body class="vyro-dashboard">
+
+    <!-- Fixed sidebar -->
+    <aside class="vyro-dash-sidebar" id="vyroDashSidebar">
+        <button type="button" class="vyro-dash-sidebar-close" id="vyroDashSidebarClose" aria-label="Close sidebar"
+            title="Close sidebar">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <a href="index.html" class="vyro-dash-brand">
+            <img src="images/logo-white.png" alt="VYRO SPIN"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        </a>
+
+        <div class="vyro-dash-side-label">MEMBER SPACE</div>
+
+        <nav class="vyro-dash-nav" aria-label="Dashboard navigation">
+            <a href="dashboard.html" class="vyro-dash-nav-link active">
+                <i class="fa-solid fa-house"></i>
+                <span>Overview</span>
+            </a>
+            <a href="my-bookings.html" class="vyro-dash-nav-link">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+            <a href="dashboard-schedule.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Class Schedule</span>
+            </a>
+            <a href="dashboard-membership.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-id-card"></i>
+                <span>Membership</span>
+            </a>
+            <a href="dashboard-instructors.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Instructors</span>
+            </a>
+            <a href="my-progress.html" class="vyro-dash-nav-link">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>My Progress</span>
+            </a>
+
+        </nav>
+
+        <div class="vyro-dash-sidebar-bottom">
+
+            <button type="button" class="vyro-dash-logout" id="vyroDashLogout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile/tablet overlay -->
+    <div class="vyro-dash-overlay" id="vyroDashOverlay"></div>
+
+    <!-- Fixed header -->
+    <header class="vyro-dash-header" id="vyroDashHeader">
+        <div class="vyro-dash-header-left">
+            <button type="button" class="vyro-dash-menu-toggle" id="vyroDashMenuToggle" aria-label="Toggle sidebar"
+                aria-expanded="true" aria-controls="vyroDashSidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="vyro-dash-page-heading">
+                <span>MEMBER PORTAL</span>
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+
+        <div class="vyro-dash-header-right">
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashDarkToggle" aria-label="Toggle dark mode"
+                aria-pressed="false" title="Dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button type="button" class="vyro-dash-header-btn" id="vyroDashRtlToggle" aria-label="Toggle RTL mode"
+                aria-pressed="false" title="RTL mode">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <div class="vyro-dash-notification-wrap">
+                <button type="button" class="vyro-dash-header-btn vyro-dash-notification-btn"
+                    id="vyroDashNotificationToggle" aria-label="Notifications, 3 unread" aria-expanded="false">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="vyro-dash-notification-badge">3</span>
+                </button>
+
+                <div class="vyro-dash-notification-panel" id="vyroDashNotificationPanel" hidden>
+                    <div class="vyro-dash-popover-heading">
+                        <strong>Notifications</strong>
+                        <span>3 new</span>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-bicycle"></i>
+                        </span>
+                        <div>
+                            <strong>Your next ride awaits</strong>
+                            <p>Explore upcoming cycling sessions.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </span>
+                        <div>
+                            <strong>Plan your next class</strong>
+                            <p>Check the latest class schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="vyro-dash-notification-item">
+                        <span class="vyro-dash-notification-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </span>
+                        <div>
+                            <strong>Keep your momentum</strong>
+                            <p>Make time for your next workout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="vyro-dash-member-profile">
+                <img src="images/member-avatar.jpg" alt="Member profile"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="vyro-dash-avatar-fallback">B</span>
+                <span class="vyro-dash-member-info">
+                    <strong>Member Name</strong>
+                    <small>VYRO Member</small>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main dashboard area -->
+    <main class="vyro-dash-main" id="vyroDashMain">
+
+
+        <!-- SECTION 1: WELCOME BANNER -->
+        <section class="vyro-dash-overview-welcome">
+            <div class="vyro-dash-overview-welcome-content">
+                <span class="vyro-dash-overview-eyebrow">YOUR FITNESS JOURNEY</span>
+                <h2>Welcome back, <span>Member!</span></h2>
+                <p>Every ride brings you closer to your goals. Ready to make today's ride count?</p>
+                <a href="dashboard-schedule.html" class="vyro-dash-overview-primary-btn">
+                    Book Your Next Ride
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="vyro-dash-overview-welcome-icon">
+                <i class="fa-solid fa-bicycle"></i>
+                <span>RIDE. SWEAT. REPEAT.</span>
+            </div>
+        </section>
+
+
+        <!-- SECTION 2: QUICK STATS -->
+        <section class="vyro-dash-overview-stats">
+            <article class="vyro-dash-overview-stat-card">
+                <div class="vyro-dash-overview-stat-top">
+                    <span>Upcoming Bookings</span>
+                    <i class="fa-regular fa-calendar-check"></i>
+                </div>
+                <strong>02</strong>
+                <p>Classes scheduled ahead</p>
+            </article>
+
+            <article class="vyro-dash-overview-stat-card">
+                <div class="vyro-dash-overview-stat-top">
+                    <span>Completed Rides</span>
+                    <i class="fa-solid fa-bicycle"></i>
+                </div>
+                <strong>12</strong>
+                <p>Rides completed so far</p>
+            </article>
+
+            <article class="vyro-dash-overview-stat-card vyro-dash-overview-stat-featured">
+                <div class="vyro-dash-overview-stat-top">
+                    <span>Classes Remaining</span>
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+                <strong>06</strong>
+                <p>Available in your package</p>
+            </article>
+
+            <article class="vyro-dash-overview-stat-card">
+                <div class="vyro-dash-overview-stat-top">
+                    <span>Membership</span>
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+                <strong class="vyro-dash-overview-membership-status">Active</strong>
+                <p>Your membership is in good standing</p>
+            </article>
+        </section>
+
+
+        <!-- SECTION 3: UPCOMING RIDES + MEMBERSHIP -->
+        <section class="vyro-dash-overview-main-grid">
+
+            <div class="vyro-dash-overview-panel">
+                <div class="vyro-dash-overview-panel-heading">
+                    <div>
+                        <span class="vyro-dash-overview-eyebrow">YOUR NEXT SESSIONS</span>
+                        <h3>Upcoming Rides</h3>
+                    </div>
+                    <a href="my-bookings.html">View All <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <article class="vyro-dash-overview-ride">
+                    <div class="vyro-dash-overview-ride-date">
+                        <span>DATE</span>
+                        <i class="fa-regular fa-calendar"></i>
+                    </div>
+                    <div class="vyro-dash-overview-ride-info">
+                        <span class="vyro-dash-overview-ride-tag">POWER RIDE</span>
+                        <h4>Power & Performance</h4>
+                        <p><i class="fa-regular fa-clock"></i> 06:30 AM</p>
+                        <p><i class="fa-solid fa-user"></i> Coach Alex</p>
+                    </div>
+                    <span class="vyro-dash-overview-booking-status">Booked</span>
+                </article>
+
+                <article class="vyro-dash-overview-ride">
+                    <div class="vyro-dash-overview-ride-date">
+                        <span>DATE</span>
+                        <i class="fa-regular fa-calendar"></i>
+                    </div>
+                    <div class="vyro-dash-overview-ride-info">
+                        <span class="vyro-dash-overview-ride-tag">RHYTHM RIDE</span>
+                        <h4>Ride to the Rhythm</h4>
+                        <p><i class="fa-regular fa-clock"></i> 07:30 AM</p>
+                        <p><i class="fa-solid fa-user"></i> Coach Maya</p>
+                    </div>
+                    <span class="vyro-dash-overview-booking-status">Booked</span>
+                </article>
+            </div>
+
+
+            <div class="vyro-dash-overview-panel vyro-dash-overview-membership">
+                <div class="vyro-dash-overview-panel-heading">
+                    <div>
+                        <span class="vyro-dash-overview-eyebrow">YOUR PLAN</span>
+                        <h3>My Membership</h3>
+                    </div>
+                    <i class="fa-solid fa-id-card vyro-dash-overview-panel-icon"></i>
+                </div>
+
+                <span class="vyro-dash-overview-plan-badge">
+                    <i class="fa-solid fa-circle-check"></i> ACTIVE PLAN
+                </span>
+
+                <h4>8 Class Pack</h4>
+                <p class="vyro-dash-overview-plan-description">
+                    Keep showing up, keep getting stronger. Your next ride is waiting.
+                </p>
+
+                <div class="vyro-dash-overview-progress-info">
+                    <span>Package usage</span>
+                    <strong>2 of 8 used</strong>
+                </div>
+
+                <div class="vyro-dash-overview-progress-track">
+                    <span></span>
+                </div>
+
+                <div class="vyro-dash-overview-plan-footer">
+                    <span>6 classes remaining</span>
+                    <a href="dashboard-membership.html">View Plan</a>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 4: QUICK ACTIONS + MOTIVATION -->
+        <section class="vyro-dash-overview-bottom-grid">
+
+            <div class="vyro-dash-overview-panel">
+                <div class="vyro-dash-overview-panel-heading">
+                    <div>
+                        <span class="vyro-dash-overview-eyebrow">MEMBER SHORTCUTS</span>
+                        <h3>Quick Actions</h3>
+                    </div>
+                </div>
+
+                <a href="dashboard-schedule.html" class="vyro-dash-overview-action">
+                    <span class="vyro-dash-overview-action-icon">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                    </span>
+                    <span class="vyro-dash-overview-action-text">
+                        <strong>Book a Class</strong>
+                        <small>Find your next favourite ride</small>
+                    </span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a href="my-bookings.html" class="vyro-dash-overview-action">
+                    <span class="vyro-dash-overview-action-icon">
+                        <i class="fa-solid fa-ticket"></i>
+                    </span>
+                    <span class="vyro-dash-overview-action-text">
+                        <strong>My Bookings</strong>
+                        <small>Check your upcoming sessions</small>
+                    </span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a href="my-progress.html" class="vyro-dash-overview-action">
+                    <span class="vyro-dash-overview-action-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </span>
+                    <span class="vyro-dash-overview-action-text">
+                        <strong>Track My Progress</strong>
+                        <small>Celebrate your fitness journey</small>
+                    </span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+
+
+            <div class="vyro-dash-overview-motivation">
+                <div class="vyro-dash-overview-motivation-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <span class="vyro-dash-overview-eyebrow">YOUR DAILY REMINDER</span>
+                <h3>Stronger With Every Ride.</h3>
+                <p>You don't need to be perfect. Just show up, find your rhythm and keep moving forward.</p>
+                <a href="dashboard-schedule.html">
+                    Find Your Next Ride <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <i class="fa-solid fa-bicycle vyro-dash-overview-decoration"></i>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Logout confirmation modal -->
+    <div class="vyro-dash-modal" id="vyroDashLogoutModal" role="dialog" aria-modal="true"
+        aria-labelledby="vyroDashLogoutTitle" hidden>
+        <div class="vyro-dash-modal-card">
+            <div class="vyro-dash-modal-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <h2 id="vyroDashLogoutTitle">Log out of your account?</h2>
+            <p>Are you sure you want to log out of your VYRO SPIN member account?</p>
+            <div class="vyro-dash-modal-actions">
+                <button type="button" class="vyro-dash-cancel-btn" id="vyroDashLogoutNo">
+                    No, stay
+                </button>
+                <button type="button" class="vyro-dash-confirm-logout" id="vyroDashLogoutYes">
+                    Yes, log out
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

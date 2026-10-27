@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/theme.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYRO SPIN</title>
+
+    <meta name="description" content="Ride stronger with VYRO SPIN, your indoor cycling and performance studio.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Fonts and Font Awesome should be in <head>
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- VYRO SPIN Header -->
+    <header class="vyro-header" id="vyroHeader">
+        <div class="vyro-header-inner">
+
+            <!-- Logo: Left Edge -->
+            <a href="index.html" class="vyro-logo" aria-label="VYRO SPIN Home">
+                <img src="images/logo.png" alt="VYRO SPIN">
+            </a>
+
+            <!-- Center Navigation -->
+            <nav class="vyro-nav" id="vyroNav" aria-label="Main navigation">
+                <a href="index.html" class="vyro-nav-link active">Home 1</a>
+                <a href="home-2.html" class="vyro-nav-link">Home 2</a>
+                <a href="about.html" class="vyro-nav-link">About</a>
+                <a href="class-schedule.html" class="vyro-nav-link">Class Schedule</a>
+                <a href="membership.html" class="vyro-nav-link">Membership &amp; Packages</a>
+                <a href="instructors.html" class="vyro-nav-link">Instructors</a>
+                <a href="contact.html" class="vyro-nav-link">Contact</a>
+                <a href="dashboard.html" class="vyro-nav-link">Dashboard</a>
+
+                <!-- Responsive-only controls inside menu -->
+                <div class="vyro-mobile-controls">
+                    <button type="button" class="vyro-control-btn" data-theme-toggle aria-label="Toggle dark mode">
+                        <i class="fa-solid fa-moon"></i>
+                        <span>Dark Mode</span>
+                    </button>
+
+                    <button type="button" class="vyro-control-btn" data-rtl-toggle aria-label="Toggle RTL layout">
+                        <i class="fa-solid fa-right-left"></i>
+                        <span>RTL Mode</span>
+                    </button>
+
+                    <a href="login.html" class="vyro-login-btn">
+                        Login
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Desktop Right Controls -->
+            <div class="vyro-desktop-controls">
+                <button type="button" class="vyro-icon-btn" data-theme-toggle aria-label="Toggle dark mode"
+                    title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button type="button" class="vyro-icon-btn" data-rtl-toggle aria-label="Toggle RTL layout"
+                    title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="vyro-login-btn">
+                    Login
+                </a>
+            </div>
+
+            <!-- Responsive Menu Toggle -->
+            <button type="button" class="vyro-menu-toggle" id="vyroMenuToggle" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="vyroNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- =========================================
+     SECTION 1: COMMON PAGE HERO
+========================================= -->
+    <section class="vyro-page-hero mp-banner" id="vyroPageHero">
+        <div class="vyro-page-hero-content">
+            <h1>FIND YOUR FIT. RIDE YOUR WAY.</h1>
+            <p>
+
+                Discover flexible cycling memberships and class packages designed around your goals, routine and riding
+                style.
+
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 2: MEMBERSHIP PLANS -->
+    <section class="vyro-membership-plans" id="vyroMembershipPlans">
+        <div class="vyro-membership-page-container">
+
+            <!-- HEADING -->
+            <div class="vyro-membership-page-heading">
+                <div class="vyro-membership-heading-left">
+                    <span class="vyro-membership-eyebrow">OUR MEMBERSHIPS</span>
+                    <h2>FIND A PLAN THAT<br>FITS YOUR RIDE.</h2>
+                </div>
+
+                <p>
+                    Whether you're trying your first class or building a regular
+                    cycling routine, choose a plan that works with your goals
+                    and schedule.
+                </p>
+            </div>
+
+            <!-- MEMBERSHIP CARDS -->
+            <div class="vyro-membership-page-grid">
+
+                <!-- DROP-IN -->
+                <article class="vyro-membership-page-card">
+                    <div class="vyro-membership-card-top">
+                        <div class="vyro-membership-card-title">
+                            <span class="vyro-membership-plan-label">JUST GETTING STARTED</span>
+                            <h3>DROP-IN CLASS</h3>
+                            <p class="vyro-membership-subtitle">One ride, your way</p>
+                        </div>
+
+                        <span class="vyro-membership-icon">
+                            <i class="fa-solid fa-bicycle"></i>
+                        </span>
+                    </div>
+
+                    <div class="vyro-membership-page-price">
+                        <span class="vyro-membership-currency">₹</span>
+                        <span class="vyro-membership-amount">399</span>
+                    </div>
+
+                    <p class="vyro-membership-description">
+                        Try a class before choosing a package or membership.
+                    </p>
+
+                    <ul class="vyro-membership-page-features">
+                        <li><i class="fa-solid fa-check"></i> 1 class pass</li>
+                        <li><i class="fa-solid fa-check"></i> Choose an available class</li>
+                        <li><i class="fa-solid fa-check"></i> No monthly commitment</li>
+                    </ul>
+
+                    <a href="booking.html" class="vyro-membership-button vyro-membership-button-outline">
+                        BOOK A CLASS
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- 4 CLASS PACK -->
+                <article class="vyro-membership-page-card vyro-membership-card-featured">
+
+                    <span class="vyro-membership-page-popular">POPULAR CHOICE</span>
+
+                    <div class="vyro-membership-card-top">
+                        <div class="vyro-membership-card-title">
+                            <span class="vyro-membership-plan-label">BUILD YOUR ROUTINE</span>
+                            <h3>4 CLASS PACK</h3>
+                            <p class="vyro-membership-subtitle">A little more consistency</p>
+                        </div>
+
+                        <span class="vyro-membership-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </span>
+                    </div>
+
+                    <div class="vyro-membership-page-price">
+                        <span class="vyro-membership-currency">₹</span>
+                        <span class="vyro-membership-amount">1,399</span>
+                    </div>
+
+                    <p class="vyro-membership-description">
+                        A flexible option for riders who want to return regularly.
+                    </p>
+
+                    <ul class="vyro-membership-page-features">
+                        <li><i class="fa-solid fa-check"></i> 4 class passes</li>
+                        <li><i class="fa-solid fa-check"></i> ₹350 per class (approx.)</li>
+                        <li><i class="fa-solid fa-check"></i> No monthly commitment</li>
+                    </ul>
+
+                    <a href="booking.html?package=4-class" class="vyro-membership-button vyro-membership-button-filled">
+                        CHOOSE 4 CLASS PACK
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- 8 CLASS PACK -->
+                <article class="vyro-membership-page-card">
+                    <div class="vyro-membership-card-top">
+                        <div class="vyro-membership-card-title">
+                            <span class="vyro-membership-plan-label">KEEP THE MOMENTUM</span>
+                            <h3>8 CLASS PACK</h3>
+                            <p class="vyro-membership-subtitle">Make riding a habit</p>
+                        </div>
+
+                        <span class="vyro-membership-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </span>
+                    </div>
+
+                    <div class="vyro-membership-page-price">
+                        <span class="vyro-membership-currency">₹</span>
+                        <span class="vyro-membership-amount">2,499</span>
+                    </div>
+
+                    <p class="vyro-membership-description">
+                        Ideal for riders who want more sessions in their routine.
+                    </p>
+
+                    <ul class="vyro-membership-page-features">
+                        <li><i class="fa-solid fa-check"></i> 8 class passes</li>
+                        <li><i class="fa-solid fa-check"></i> ₹312 per class (approx.)</li>
+                        <li><i class="fa-solid fa-check"></i> No monthly commitment</li>
+                    </ul>
+
+                    <a href="booking.html?package=8-class"
+                        class="vyro-membership-button vyro-membership-button-outline">
+                        CHOOSE 8 CLASS PACK
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- MONTHLY MEMBERSHIP -->
+                <article class="vyro-membership-page-card">
+                    <div class="vyro-membership-card-top">
+                        <div class="vyro-membership-card-title">
+                            <span class="vyro-membership-plan-label">FOR REGULAR RIDERS</span>
+                            <h3>MONTHLY MEMBERSHIP</h3>
+                            <p class="vyro-membership-subtitle">Make VYRO part of your week</p>
+                        </div>
+
+                        <span class="vyro-membership-icon">
+                            <i class="fa-solid fa-infinity"></i>
+                        </span>
+                    </div>
+
+                    <div class="vyro-membership-page-price">
+                        <span class="vyro-membership-currency">₹</span>
+                        <span class="vyro-membership-amount">3,499</span>
+                        <span class="vyro-membership-price-period">/ month</span>
+                    </div>
+
+                    <p class="vyro-membership-description">
+                        For riders who want a recurring plan that fits their lifestyle.
+                    </p>
+
+                    <ul class="vyro-membership-page-features">
+                        <li><i class="fa-solid fa-check"></i> Monthly class allowance as selected</li>
+                        <li><i class="fa-solid fa-check"></i> Member booking options</li>
+                        <li><i class="fa-solid fa-check"></i> Membership terms apply</li>
+                    </ul>
+
+                    <a href="booking.html?package=monthly"
+                        class="vyro-membership-button vyro-membership-button-outline">
+                        EXPLORE MEMBERSHIP
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+            </div>
+
+            <!-- BENEFITS STRIP -->
+            <div class="vyro-membership-benefits">
+
+                <div class="vyro-membership-benefit">
+                    <i class="fa-regular fa-calendar"></i>
+                    <div>
+                        <h4>FLEXIBLE OPTIONS</h4>
+                        <p>Choose a plan for your routine</p>
+                    </div>
+                </div>
+
+                <div class="vyro-membership-benefit">
+                    <i class="fa-solid fa-tags"></i>
+                    <div>
+                        <h4>BETTER VALUE</h4>
+                        <p>Compare the cost per class</p>
+                    </div>
+                </div>
+
+                <div class="vyro-membership-benefit">
+                    <i class="fa-solid fa-people-group"></i>
+                    <div>
+                        <h4>RIDE YOUR WAY</h4>
+                        <p>Choose classes that suit you</p>
+                    </div>
+                </div>
+
+                <div class="vyro-membership-benefit">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <h4>BOOK WITH CLARITY</h4>
+                        <p>Review terms before checkout</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="vyro-membership-disclaimer">
+                Sample pricing for website design. Confirm actual prices,
+                class allowances and package terms before publishing.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: COMPARE YOUR PACKAGES -->
+    <section class="vyro-package-compare" id="vyroPackageCompare">
+        <div class="vyro-package-compare-container">
+
+            <div class="vyro-package-compare-header">
+                <div class="vyro-package-compare-title">
+                    <span class="vyro-package-compare-eyebrow">
+                        MAKE EVERY RIDE COUNT
+                    </span>
+
+                    <h2>MORE RIDES.<br>BETTER VALUE.</h2>
+                </div>
+
+                <p>
+                    Not sure which option to choose? Compare the cost per class
+                    and pick a package that matches how often you want to ride.
+                </p>
+            </div>
+
+            <div class="vyro-package-compare-table-wrap">
+                <table class="vyro-package-compare-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">PACKAGE</th>
+                            <th scope="col">CLASSES INCLUDED</th>
+                            <th scope="col">TOTAL PRICE</th>
+                            <th scope="col">COST PER CLASS</th>
+                            <th scope="col">BEST FOR</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Drop-In Class</strong>
+                                <span class="vyro-package-compare-sub">
+                                    Try a single session
+                                </span>
+                            </td>
+                            <td>1 class</td>
+                            <td>₹399</td>
+                            <td>₹399</td>
+                            <td>First-time riders</td>
+                        </tr>
+
+                        <tr class="vyro-package-compare-highlight">
+                            <td>
+                                <strong>4 Class Pack</strong>
+                                <span class="vyro-package-compare-tag">
+                                    POPULAR CHOICE
+                                </span>
+                            </td>
+                            <td>4 classes</td>
+                            <td>₹1,399</td>
+                            <td>₹350 approx.</td>
+                            <td>Occasional riders</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>8 Class Pack</strong>
+                                <span class="vyro-package-compare-sub">
+                                    More sessions, more routine
+                                </span>
+                            </td>
+                            <td>8 classes</td>
+                            <td>₹2,499</td>
+                            <td>₹312 approx.</td>
+                            <td>Regular riders</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>Monthly Membership</strong>
+                                <span class="vyro-package-compare-sub">
+                                    Recurring monthly plan
+                                </span>
+                            </td>
+                            <td>As defined by plan</td>
+                            <td>₹3,499/month</td>
+                            <td>Depends on usage</td>
+                            <td>Frequent riders</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="vyro-package-compare-tip">
+                <div class="vyro-package-compare-tip-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div class="vyro-package-compare-tip-content">
+                    <h3>OUR TIP: START WITH YOUR ROUTINE.</h3>
+                    <p>
+                        Planning a few rides? A class pack may suit you.
+                        Want to ride regularly? Compare the monthly membership
+                        allowance and terms before deciding.
+                    </p>
+                </div>
+
+                <a href="booking.html" class="vyro-package-compare-cta">
+                    FIND YOUR PACKAGE
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <p class="vyro-package-compare-disclaimer">
+                Prices are illustrative. Per-class rates are rounded estimates.
+                Confirm actual package prices, validity and monthly class limits
+                before publishing.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: MEMBERSHIP BENEFITS -->
+    <section class="vyro-member-benefits" id="vyroMemberBenefits">
+        <div class="vyro-member-benefits-container">
+
+            <div class="vyro-member-benefits-header">
+                <div>
+                    <span class="vyro-member-benefits-eyebrow">
+                        THE VYRO EXPERIENCE
+                    </span>
+
+                    <h2>MORE THAN<br>JUST A RIDE.</h2>
+                </div>
+
+                <p>
+                    Your membership is about more than getting on a bike.
+                    Discover the studio experience, flexible booking and
+                    guidance that help you make every session count.
+                </p>
+            </div>
+
+            <div class="vyro-member-benefits-layout">
+
+                <!-- FEATURED BENEFIT -->
+                <article class="vyro-member-benefit-featured">
+                    <div class="vyro-member-benefit-featured-image">
+                        <img src="images/membership-coaching.jpg" alt="Cycling coach guiding a studio member">
+
+                        <span class="vyro-member-benefit-image-label">
+                            YOUR RIDE. YOUR PROGRESS.
+                        </span>
+                    </div>
+
+                    <div class="vyro-member-benefit-featured-content">
+                        <span class="vyro-member-benefit-number">01 / COACHING</span>
+
+                        <h3>GUIDANCE AT EVERY STAGE.</h3>
+
+                        <p>
+                            Whether you're new to indoor cycling or building
+                            your stamina, our coaches can help you understand
+                            the ride, adjust your bike and work at your own pace.
+                        </p>
+
+                        <a href="class-schedule.html" class="vyro-member-benefit-link">
+                            EXPLORE OUR CLASSES
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- BENEFIT 02 -->
+                <article class="vyro-member-benefit-card">
+                    <span class="vyro-member-benefit-card-icon">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </span>
+
+                    <span class="vyro-member-benefit-number">02 / FLEXIBILITY</span>
+
+                    <h3>BOOK AROUND YOUR LIFE.</h3>
+
+                    <p>
+                        Check the weekly timetable and choose available sessions
+                        that work with your schedule.
+                    </p>
+
+                    <a href="class-schedule.html" class="vyro-member-benefit-text-link">
+                        VIEW CLASS TIMES
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- BENEFIT 03 -->
+                <article class="vyro-member-benefit-card">
+                    <span class="vyro-member-benefit-card-icon">
+                        <i class="fa-solid fa-music"></i>
+                    </span>
+
+                    <span class="vyro-member-benefit-number">03 / EXPERIENCE</span>
+
+                    <h3>FIND YOUR RIDE STYLE.</h3>
+
+                    <p>
+                        Explore rhythm, power, endurance and reset sessions
+                        to find the class style you enjoy.
+                    </p>
+
+                    <a href="class-schedule.html" class="vyro-member-benefit-text-link">
+                        FIND YOUR CLASS
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- BENEFIT 04 -->
+                <article class="vyro-member-benefit-card">
+                    <span class="vyro-member-benefit-card-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </span>
+
+                    <span class="vyro-member-benefit-number">04 / PROGRESS</span>
+
+                    <h3>BUILD YOUR OWN ROUTINE.</h3>
+
+                    <p>
+                        Choose a realistic riding frequency and track your
+                        consistency over time without comparing yourself
+                        with other riders.
+                    </p>
+
+                    <a href="booking.html" class="vyro-member-benefit-text-link">
+                        PLAN YOUR RIDES
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- BENEFIT 05 -->
+                <article class="vyro-member-benefit-card">
+                    <span class="vyro-member-benefit-card-icon">
+                        <i class="fa-solid fa-people-group"></i>
+                    </span>
+
+                    <span class="vyro-member-benefit-number">05 / COMMUNITY</span>
+
+                    <h3>RIDE TOGETHER. GROW TOGETHER.</h3>
+
+                    <p>
+                        Enjoy the energy of group rides, meet fellow riders and stay
+                        motivated as you build your cycling routine.
+                    </p>
+
+                    <a href="class-schedule.html" class="vyro-member-benefit-text-link">
+                        FIND YOUR NEXT RIDE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+            </div>
+
+            <!-- IMPORTANT MEMBERSHIP INFORMATION -->
+            <div class="vyro-member-benefits-info">
+                <div class="vyro-member-benefits-info-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+
+                <div class="vyro-member-benefits-info-content">
+                    <h3>BEFORE YOU CHOOSE A PLAN</h3>
+
+                    <p>
+                        Check the class allowance, package expiry, booking
+                        availability, cancellation policy and renewal terms
+                        before completing your purchase.
+                    </p>
+                </div>
+
+                <a href="contact.html" class="vyro-member-benefits-info-btn">
+                    ASK OUR TEAM
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: MEMBERSHIP FAQ -->
+    <section class="vyro-membership-faq" id="vyroMembershipFaq">
+        <div class="vyro-membership-faq-container">
+
+            <div class="vyro-membership-faq-heading">
+                <span class="vyro-membership-faq-eyebrow">
+                    GOT QUESTIONS?
+                </span>
+
+                <h2>GOOD TO KNOW<br>BEFORE YOU RIDE.</h2>
+
+                <p>
+                    Everything you need to know before choosing your
+                    VYRO membership or class package.
+                </p>
+            </div>
+
+            <div class="vyro-membership-faq-layout">
+
+                <div class="vyro-membership-faq-intro">
+                    <div class="vyro-membership-faq-icon">
+                        <i class="fa-regular fa-circle-question"></i>
+                    </div>
+
+                    <h3>STILL FIGURING IT OUT?</h3>
+
+                    <p>
+                        Choosing your first package should feel simple.
+                        If you need help finding the right option, our team
+                        can help you understand the available plans.
+                    </p>
+
+                    <a href="contact.html" class="vyro-membership-faq-contact">
+                        TALK TO OUR TEAM
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <div class="vyro-membership-faq-note">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Choose a plan that fits your routine.</span>
+                    </div>
+                </div>
+
+                <div class="vyro-membership-faq-list">
+
+                    <!-- FAQ 1 -->
+                    <details class="vyro-membership-faq-item">
+                        <summary>
+                            <span>Which package should I choose as a beginner?</span>
+                            <span class="vyro-membership-faq-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </summary>
+
+                        <div class="vyro-membership-faq-answer">
+                            <p>
+                                Start with a single drop-in class to experience
+                                the studio before committing to a larger package.
+                                You can explore other options after your first ride.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 2 -->
+                    <details class="vyro-membership-faq-item">
+                        <summary>
+                            <span>How do I book a class using my package?</span>
+                            <span class="vyro-membership-faq-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </summary>
+
+                        <div class="vyro-membership-faq-answer">
+                            <p>
+                                Check the class schedule, select your preferred
+                                session and follow the booking process. Confirm
+                                how package credits are applied when booking.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 3 -->
+                    <details class="vyro-membership-faq-item">
+                        <summary>
+                            <span>Do my class credits expire?</span>
+                            <span class="vyro-membership-faq-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </summary>
+
+                        <div class="vyro-membership-faq-answer">
+                            <p>
+                                Package validity depends on the plan you purchase.
+                                Check the expiry date and usage conditions displayed
+                                before checkout.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 4 -->
+                    <details class="vyro-membership-faq-item">
+                        <summary>
+                            <span>Can I cancel or reschedule a booking?</span>
+                            <span class="vyro-membership-faq-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </summary>
+
+                        <div class="vyro-membership-faq-answer">
+                            <p>
+                                Cancellation and rescheduling depend on the studio's
+                                booking policy. Review the applicable deadline and
+                                any credit or fee conditions before confirming.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 5 -->
+                    <details class="vyro-membership-faq-item">
+                        <summary>
+                            <span>Does a monthly membership include unlimited classes?</span>
+                            <span class="vyro-membership-faq-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </summary>
+
+                        <div class="vyro-membership-faq-answer">
+                            <p>
+                                Not necessarily. The number of included classes
+                                depends on the membership selected. Check the
+                                monthly allowance and restrictions before purchase.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 6 -->
+                    <details class="vyro-membership-faq-item">
+                        <summary>
+                            <span>Can I change my membership later?</span>
+                            <span class="vyro-membership-faq-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </summary>
+
+                        <div class="vyro-membership-faq-answer">
+                            <p>
+                                Changes depend on the studio's membership terms.
+                                Contact the team to check whether an upgrade,
+                                downgrade or plan change is available.
+                            </p>
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 6: MEMBERSHIP FINAL CTA -->
+    <section class="vyro-membership-final-cta">
+        <div class="vyro-membership-final-cta-inner">
+
+            <div class="vyro-membership-final-cta-content">
+                <span class="vyro-membership-final-cta-eyebrow">
+                    YOUR NEXT RIDE STARTS HERE
+                </span>
+
+                <h2>
+                    READY TO RIDE
+                    <span>WITH VYRO?</span>
+                </h2>
+
+                <p>
+                    Find the membership that fits your routine, choose your
+                    first class and take the next step towards a stronger,
+                    more energised you.
+                </p>
+
+                <div class="vyro-membership-final-cta-actions">
+                    <a href="booking.html" class="vyro-membership-final-cta-btn">
+                        BOOK YOUR FIRST RIDE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="class-schedule.html" class="vyro-membership-final-cta-link">
+                        VIEW CLASS SCHEDULE
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="vyro-membership-final-cta-visual">
+                <div class="vyro-membership-final-cta-circle">
+                    <span class="vyro-membership-final-cta-circle-text">
+                        FIND YOUR PACE. FEEL THE POWER.
+                    </span>
+
+                    <i class="fa-solid fa-person-biking"></i>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================
+     VYRO SPIN FOOTER
+========================= -->
+    <footer class="vyro-footer">
+
+        <div class="vyro-footer-main">
+            <div class="vyro-footer-container">
+
+                <!-- Brand -->
+                <div class="vyro-footer-brand">
+                    <a href="index.html" class="vyro-footer-logo">
+                        <img src="images/logo-white.png" alt="VYRO SPIN">
+                    </a>
+
+                    <p>
+                        Ride stronger. Feel the rhythm.
+                        Discover immersive indoor cycling classes
+                        designed to energize your body and mind.
+                    </p>
+
+                    <div class="vyro-footer-socials">
+                        <a href="https://www.instagram.com/" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="vyro-footer-column">
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="instructors.html">Our Instructors</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Classes -->
+                <div class="vyro-footer-column">
+                    <h3>Explore</h3>
+
+                    <ul>
+                        <li>
+                            <a href="class-schedule.html">Class Schedule</a>
+                        </li>
+                        <li>
+                            <a href="membership.html">Membership &amp; Packages</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Member Login</a>
+                        </li>
+                        <li>
+                            <a href="class-schedule.html">Book a Ride</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="vyro-footer-column vyro-footer-contact">
+                    <h3>Get In Touch</h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Your Studio Address, Your City</span>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+919876543210">+91 98765 43210</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:hello@vyrospin.com">
+                            hello@vyrospin.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Mon – Sat: 6 AM – 9 PM</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="vyro-footer-bottom">
+            <div class="vyro-footer-bottom-inner">
+
+                <p>
+                    &copy; <span id="vyroCopyrightYear">2026</span>
+                    VYRO SPIN. All rights reserved.
+                </p>
+
+                <div class="vyro-footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
