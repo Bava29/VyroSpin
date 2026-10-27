@@ -1,0 +1,1280 @@
+/* ==============================
+   VYRO SPIN - BASIC CSS
+================================ */
+
+:root {
+    --primary-color: #193B32;
+    --secondary-color: #D6F36A;
+
+    --heading-font: 'Barlow Condensed', sans-serif;
+    --body-font: 'Urbanist', sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    font-family: var(--body-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #222222;
+    background-color: #FFFFFF;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Buttons */
+button {
+    font-family: var(--body-font);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 12px 24px;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+/* Section Heading */
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.section-subtitle {
+    display: inline-block;
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-family: var(--heading-font);
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.section-heading h2 span {
+    color: #789B24;
+}
+
+.section-heading p {
+    font-family: var(--body-font);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .section-heading {
+        margin-bottom: 35px;
+        padding: 0 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+    .section-heading p {
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+
+:root {
+    color-scheme: light;
+    --vyro-auth-bg: #f3f5ed;
+    --vyro-auth-card: #ffffff;
+    --vyro-auth-text: #193b32;
+    --vyro-auth-muted: #737c73;
+    --vyro-auth-border: #dfe5d9;
+    --vyro-auth-input: #ffffff;
+    --vyro-auth-soft: #f5f7f0;
+    --vyro-auth-accent: #d6f36a;
+    --vyro-auth-green: #193b32;
+    --vyro-auth-shadow: 0 18px 60px rgba(25, 59, 50, 0.09);
+}
+
+html {
+    min-height: 100%;
+    background: var(--vyro-auth-bg);
+}
+
+body.vyro-auth-page {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--vyro-auth-bg);
+    color: var(--vyro-auth-text);
+    font-family: 'Urbanist', sans-serif;
+    font-size: 16px;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.vyro-auth-page *,
+.vyro-auth-page *::before,
+.vyro-auth-page *::after {
+    box-sizing: border-box;
+}
+
+.vyro-auth-page button,
+.vyro-auth-page input {
+    font: inherit;
+}
+
+.vyro-auth-page button,
+.vyro-auth-page a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.vyro-auth-page a {
+    color: inherit;
+}
+
+.vyro-auth-mode-btn i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.vyro-auth-mode-btn {
+    white-space: nowrap;
+}
+
+/* Top toolbar: normal flow, NOT fixed */
+
+.vyro-auth-toolbar {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 24px 5%;
+}
+
+.vyro-auth-preferences {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.vyro-auth-mode-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 10px 12px;
+    color: var(--vyro-auth-text);
+    background: var(--vyro-auth-card);
+    border: 1px solid var(--vyro-auth-border);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px !important;
+    font-weight: 700;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.vyro-auth-mode-btn:hover {
+    border-color: var(--vyro-auth-text);
+}
+
+.vyro-auth-mode-btn>span:first-child {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* Main centered layout */
+
+.vyro-auth-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding: 22px 20px 64px;
+}
+
+.vyro-auth-card {
+    width: 100%;
+    max-width: 490px;
+    padding: 38px 40px 30px;
+    background: var(--vyro-auth-card);
+    border: 1px solid var(--vyro-auth-border);
+    border-radius: 10px;
+    box-shadow: var(--vyro-auth-shadow);
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.vyro-auth-card-register {
+    max-width: 510px;
+}
+
+/* Logo */
+
+.vyro-auth-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+    margin: 0 auto 26px;
+    text-decoration: none;
+}
+
+.vyro-auth-logo img {
+    display: block;
+    width: auto;
+    max-width: 175px;
+    max-height: 50px;
+    object-fit: contain;
+}
+
+.vyro-auth-logo-fallback {
+    display: none;
+    color: var(--vyro-auth-text);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.vyro-auth-logo-fallback b {
+    color: #829b4a;
+}
+
+/* Heading */
+
+.vyro-auth-heading {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.vyro-auth-eyebrow {
+    display: inline-block;
+    margin-bottom: 11px;
+    color: #718b3f;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2.3px;
+}
+
+.vyro-auth-heading h1 {
+    margin: 0 0 12px;
+    color: var(--vyro-auth-text);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 39px;
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: 0.2px;
+}
+
+.vyro-auth-heading h1 span {
+    color: #829b4a;
+}
+
+.vyro-auth-heading p {
+    margin: 0;
+    color: var(--vyro-auth-muted);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+/* Form fields */
+
+.vyro-auth-form {
+    width: 100%;
+}
+
+.vyro-auth-field {
+    margin-bottom: 19px;
+}
+
+.vyro-auth-field>label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--vyro-auth-text);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.vyro-auth-field>input,
+.vyro-auth-password-wrap>input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 51px;
+    padding: 0 15px;
+    color: var(--vyro-auth-text);
+    background: var(--vyro-auth-input);
+    border: 1px solid var(--vyro-auth-border);
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vyro-auth-field input::placeholder {
+    color: #a0a69d;
+    opacity: 1;
+}
+
+.vyro-auth-field>input:focus,
+.vyro-auth-password-wrap>input:focus {
+    border-color: #829b4a;
+    box-shadow: 0 0 0 3px rgba(130, 155, 74, 0.15);
+}
+
+.vyro-auth-password-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.vyro-auth-password-wrap>input {
+    padding-inline-end: 50px;
+}
+
+.vyro-auth-eye i {
+    font-size: 18px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.vyro-auth-eye {
+    position: absolute;
+    inset-inline-end: 10px;
+    top: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    color: var(--vyro-auth-muted);
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.vyro-auth-hint {
+    display: block;
+    margin-top: 7px;
+    color: var(--vyro-auth-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Remember me + forgot password */
+
+.vyro-auth-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 12px;
+    margin: 4px 0 24px;
+}
+
+.vyro-auth-remember {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: var(--vyro-auth-muted);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.55;
+    cursor: pointer;
+}
+
+.vyro-auth-remember input {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    margin: 2px 0 0;
+    accent-color: #193b32;
+    cursor: pointer;
+}
+
+.vyro-auth-text-link,
+.vyro-auth-remember a {
+    color: var(--vyro-auth-text);
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.vyro-auth-text-link {
+    flex-shrink: 0;
+}
+
+.vyro-auth-text-link:hover,
+.vyro-auth-remember a:hover,
+.vyro-auth-register a:hover,
+.vyro-auth-legal a:hover {
+    text-decoration: underline;
+}
+
+/* Main button */
+
+.vyro-auth-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    min-height: 53px;
+    padding: 15px 19px;
+    color: #193b32;
+    background: var(--vyro-auth-accent);
+    border: 1px solid var(--vyro-auth-accent);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px !important;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.vyro-auth-submit:hover {
+    background: #c9e85a;
+    transform: translateY(-1px);
+}
+
+.vyro-auth-submit>span {
+    font-size: 23px;
+    line-height: 1;
+}
+
+.vyro-auth-notice {
+    margin: 12px 0 0;
+    color: var(--vyro-auth-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* OR divider */
+
+.vyro-auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 25px 0 19px;
+}
+
+.vyro-auth-divider>span {
+    flex: 1;
+    height: 1px;
+    background: var(--vyro-auth-border);
+}
+
+.vyro-auth-divider p {
+    margin: 0;
+    color: var(--vyro-auth-muted);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+    white-space: nowrap;
+}
+
+/* Social login */
+
+.vyro-auth-socials {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.vyro-auth-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 0;
+    min-height: 47px;
+    padding: 10px 8px;
+    background: var(--vyro-auth-card);
+    border: 1px solid var(--vyro-auth-border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.vyro-auth-social:hover {
+    background: var(--vyro-auth-soft);
+    border-color: #aeb9a5;
+}
+
+.vyro-auth-social svg {
+    flex: 0 0 auto;
+    width: 21px;
+    height: 21px;
+}
+
+.vyro-auth-social span {
+    color: var(--vyro-auth-text);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.vyro-auth-facebook svg {
+    color: #1877F2;
+}
+
+.vyro-auth-google svg {
+    width: 21px;
+    height: 21px;
+}
+
+.vyro-auth-apple svg {
+    color: var(--vyro-auth-text);
+}
+
+/* Register link and legal text */
+
+.vyro-auth-register {
+    margin: 25px 0 0;
+    color: var(--vyro-auth-muted);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.vyro-auth-register a {
+    margin-inline-start: 4px;
+    color: var(--vyro-auth-text);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.vyro-auth-legal {
+    margin: 20px 0 0;
+    padding-top: 18px;
+    color: var(--vyro-auth-muted);
+    border-top: 1px solid var(--vyro-auth-border);
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.vyro-auth-legal a {
+    color: var(--vyro-auth-text);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Register-specific terms checkbox */
+
+.vyro-auth-terms-check {
+    display: flex;
+    margin: 2px 0 23px;
+}
+
+.vyro-auth-terms-check a {
+    text-decoration: none;
+}
+
+/* Dark mode */
+
+html.dark-mode {
+    color-scheme: dark;
+    --vyro-auth-bg: #101a16;
+    --vyro-auth-card: #192720;
+    --vyro-auth-text: #f0f4e9;
+    --vyro-auth-muted: #b2bdb1;
+    --vyro-auth-border: #34473b;
+    --vyro-auth-input: #142019;
+    --vyro-auth-soft: #26372c;
+    --vyro-auth-shadow: 0 18px 60px rgba(0, 0, 0, 0.24);
+}
+
+html.dark-mode .vyro-auth-submit {
+    color: #193b32;
+}
+
+html.dark-mode .vyro-auth-mode-btn {
+    color: var(--vyro-auth-text);
+}
+
+html.dark-mode .vyro-auth-remember input {
+    accent-color: #d6f36a;
+}
+
+html.dark-mode .vyro-auth-facebook svg {
+    color: #4d9aff;
+}
+
+html.dark-mode .vyro-auth-apple svg {
+    color: #ffffff;
+}
+
+/* RTL layout */
+
+html[dir="rtl"] .vyro-auth-toolbar {
+    direction: rtl;
+}
+
+html[dir="rtl"] .vyro-auth-preferences {
+    direction: ltr;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+html[dir="rtl"] .vyro-auth-back {
+    direction: rtl;
+}
+
+html[dir="rtl"] .vyro-auth-heading,
+html[dir="rtl"] .vyro-auth-register,
+html[dir="rtl"] .vyro-auth-legal,
+html[dir="rtl"] .vyro-auth-divider {
+    direction: rtl;
+}
+
+html[dir="rtl"] .vyro-auth-submit {
+    direction: rtl;
+}
+
+html[dir="rtl"] .vyro-auth-submit>span {
+    transform: scaleX(-1);
+}
+
+html[dir="rtl"] .vyro-auth-options {
+    direction: rtl;
+}
+
+html[dir="rtl"] .vyro-auth-socials {
+    direction: rtl;
+}
+
+/* Responsive layout */
+
+@media (max-width: 600px) {
+    .vyro-auth-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+        padding: 18px 5%;
+    }
+
+    .vyro-auth-preferences {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .vyro-auth-mode-btn {
+        min-height: 40px;
+        padding: 9px 12px;
+    }
+
+    .vyro-auth-main {
+        padding: 10px 14px 40px;
+    }
+
+    .vyro-auth-card,
+    .vyro-auth-card-register {
+        padding: 29px 22px 25px;
+        border-radius: 8px;
+    }
+
+    .vyro-auth-heading h1 {
+        font-size: 35px;
+    }
+
+    .vyro-auth-heading p {
+        font-size: 15px;
+    }
+
+    .vyro-auth-options {
+        gap: 8px;
+    }
+
+    .vyro-auth-remember,
+    .vyro-auth-text-link {
+        font-size: 13px;
+    }
+
+    .vyro-auth-socials {
+        gap: 7px;
+    }
+
+    .vyro-auth-social {
+        flex-direction: column;
+        gap: 5px;
+        min-height: 65px;
+        padding: 9px 4px;
+    }
+
+    .vyro-auth-social span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .vyro-auth-card,
+    .vyro-auth-card-register {
+        padding-inline: 16px;
+    }
+
+    .vyro-auth-heading h1 {
+        font-size: 32px;
+    }
+
+    .vyro-auth-options {
+        gap: 6px;
+    }
+
+    .vyro-auth-remember,
+    .vyro-auth-text-link {
+        font-size: 12px;
+    }
+
+    .vyro-auth-mode-btn {
+        font-size: 13px !important;
+    }
+}
+
+
+/* ==========================================
+   VYRO AUTH PAGES - RESPONSIVE FIX
+   Login + Register
+========================================== */
+
+/* ---------- IPAD PRO ---------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .vyro-auth-toolbar {
+        padding: 22px 4%;
+    }
+
+    .vyro-auth-main {
+        padding: 18px 24px 50px;
+    }
+
+    .vyro-auth-card {
+        max-width: 470px;
+        padding: 34px 32px 28px;
+    }
+
+    .vyro-auth-card-register {
+        max-width: 490px;
+    }
+
+    .vyro-auth-heading h1 {
+        font-size: 37px;
+        line-height: 1.1;
+    }
+
+    .vyro-auth-socials {
+        gap: 8px;
+    }
+
+    .vyro-auth-social {
+        gap: 6px;
+        padding: 10px 6px;
+    }
+
+    .vyro-auth-social span {
+        font-size: 13px;
+    }
+}
+
+
+/* ---------- IPAD MINI ---------- */
+@media (min-width: 600px) and (max-width: 768px) {
+
+    .vyro-auth-toolbar {
+        padding: 20px 5%;
+    }
+
+    .vyro-auth-main {
+        align-items: flex-start;
+        padding: 16px 24px 45px;
+    }
+
+    .vyro-auth-card,
+    .vyro-auth-card-register {
+        width: 100%;
+        max-width: 470px;
+        padding: 32px 30px 28px;
+    }
+
+    .vyro-auth-logo {
+        margin-bottom: 23px;
+    }
+
+    .vyro-auth-logo img {
+        max-width: 160px;
+        max-height: 48px;
+    }
+
+    .vyro-auth-heading {
+        margin-bottom: 25px;
+    }
+
+    .vyro-auth-heading h1 {
+        font-size: 36px;
+        line-height: 1.1;
+        overflow-wrap: break-word;
+    }
+
+    .vyro-auth-heading p {
+        font-size: 16px;
+    }
+
+    .vyro-auth-field {
+        margin-bottom: 18px;
+    }
+
+    .vyro-auth-field>input,
+    .vyro-auth-password-wrap>input {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .vyro-auth-options {
+        gap: 12px;
+    }
+
+    .vyro-auth-remember,
+    .vyro-auth-text-link {
+        font-size: 14px;
+    }
+
+    .vyro-auth-socials {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .vyro-auth-social {
+        flex-direction: column;
+        gap: 6px;
+        min-height: 66px;
+        padding: 9px 5px;
+    }
+
+    .vyro-auth-social span {
+        font-size: 13px;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 599px) {
+
+    .vyro-auth-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 16px 5%;
+    }
+
+    .vyro-auth-preferences {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 9px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .vyro-auth-mode-btn {
+        min-width: 42px;
+        min-height: 42px;
+        padding: 9px 12px;
+        font-size: 14px !important;
+    }
+
+    .vyro-auth-main {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        padding: 8px 15px 35px;
+    }
+
+    .vyro-auth-card,
+    .vyro-auth-card-register {
+        width: 100%;
+        max-width: 440px;
+        min-width: 0;
+        padding: 28px 22px 25px;
+        border-radius: 8px;
+    }
+
+    .vyro-auth-logo {
+        min-height: 40px;
+        margin-bottom: 22px;
+    }
+
+    .vyro-auth-logo img {
+        max-width: 150px;
+        max-height: 45px;
+    }
+
+    .vyro-auth-heading {
+        margin-bottom: 25px;
+    }
+
+    .vyro-auth-eyebrow {
+        font-size: 13px;
+        letter-spacing: 1.8px;
+    }
+
+    .vyro-auth-heading h1 {
+        font-size: 35px;
+        line-height: 1.08;
+        overflow-wrap: break-word;
+    }
+
+    .vyro-auth-heading p {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .vyro-auth-field {
+        margin-bottom: 18px;
+    }
+
+    .vyro-auth-field>label {
+        font-size: 15px;
+    }
+
+    .vyro-auth-field>input,
+    .vyro-auth-password-wrap>input {
+        width: 100%;
+        min-width: 0;
+        height: 50px;
+        padding-inline: 13px;
+        font-size: 16px;
+    }
+
+    .vyro-auth-password-wrap>input {
+        padding-inline-end: 48px;
+    }
+
+    .vyro-auth-eye {
+        inset-inline-end: 7px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .vyro-auth-options {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 4px 0 22px;
+    }
+
+    .vyro-auth-remember {
+        gap: 7px;
+        font-size: 14px;
+    }
+
+    .vyro-auth-text-link {
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .vyro-auth-submit {
+        width: 100%;
+        min-height: 52px;
+        padding: 14px 16px;
+        font-size: 15px !important;
+    }
+
+    .vyro-auth-divider {
+        gap: 9px;
+        margin: 23px 0 18px;
+    }
+
+    .vyro-auth-divider p {
+        font-size: 12px;
+        letter-spacing: 0.7px;
+        text-align: center;
+    }
+
+    .vyro-auth-socials {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .vyro-auth-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        width: 100%;
+        min-width: 0;
+        min-height: 66px;
+        padding: 9px 4px;
+    }
+
+    .vyro-auth-social svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .vyro-auth-social span {
+        font-size: 12px;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    .vyro-auth-register {
+        margin-top: 22px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .vyro-auth-register a {
+        display: inline-block;
+    }
+
+    .vyro-auth-hint {
+        font-size: 13px;
+    }
+
+    .vyro-auth-terms-check {
+        align-items: flex-start;
+        gap: 9px;
+        line-height: 1.65;
+    }
+
+    .vyro-auth-terms-check input {
+        flex-shrink: 0;
+        margin-top: 4px;
+    }
+
+    .vyro-auth-terms-check span {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* ---------- SMALL MOBILE: 360px AND BELOW ---------- */
+@media (max-width: 380px) {
+
+    .vyro-auth-toolbar {
+        padding: 13px 16px;
+    }
+
+    .vyro-auth-main {
+        padding: 6px 12px 28px;
+    }
+
+    .vyro-auth-card,
+    .vyro-auth-card-register {
+        padding: 25px 16px 22px;
+    }
+
+    .vyro-auth-heading h1 {
+        font-size: 32px;
+        line-height: 1.1;
+    }
+
+    .vyro-auth-heading p {
+        font-size: 15px;
+    }
+
+    .vyro-auth-options {
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .vyro-auth-remember,
+    .vyro-auth-text-link {
+        font-size: 13px;
+    }
+
+    .vyro-auth-socials {
+        gap: 6px;
+    }
+
+    .vyro-auth-social {
+        min-height: 62px;
+        padding: 8px 3px;
+    }
+
+    .vyro-auth-social span {
+        font-size: 12px;
+    }
+
+    .vyro-auth-divider {
+        gap: 7px;
+    }
+
+    .vyro-auth-divider p {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .vyro-auth-register {
+        font-size: 14px;
+    }
+
+    .vyro-auth-mode-btn {
+        min-height: 40px;
+        padding: 8px 10px;
+    }
+}
+
+
+/* ---------- RTL RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+
+    html[dir="rtl"] .vyro-auth-toolbar {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .vyro-auth-preferences {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    html[dir="rtl"] .vyro-auth-options {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .vyro-auth-submit {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .vyro-auth-submit>span {
+        transform: scaleX(-1);
+    }
+
+    html[dir="rtl"] .vyro-auth-socials {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .vyro-auth-heading,
+    html[dir="rtl"] .vyro-auth-register,
+    html[dir="rtl"] .vyro-auth-divider {
+        direction: rtl;
+    }
+}
+
+
+/* ---------- ACCESSIBILITY ---------- */
+@media (prefers-reduced-motion: reduce) {
+
+    .vyro-auth-page *,
+    .vyro-auth-page *::before,
+    .vyro-auth-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* Login & Register - Default logo */
+.vyro-auth-logo img {
+    content: url("../images/logo.png");
+}
+
+/* Login & Register - Dark mode logo */
+html.dark-mode .vyro-auth-logo img {
+    content: url("../images/logo-white.png");
+}
