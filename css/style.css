@@ -5337,6 +5337,12 @@ html.dark-mode .vyro-h2-milestone-tag i {
     line-height: 1.5;
 }
 
+html[dir="rtl"] .vyro-h2-featured-benefits {
+    width: 100%;
+    direction: rtl;
+    justify-content: flex-start;
+}
+
 /* PLAY BUTTON */
 
 .vyro-h2-featured-play {
@@ -7767,6 +7773,28 @@ html[dir="rtl"] .vyro-about-eyebrow {
     flex-direction: row-reverse;
 }
 
+html[dir="rtl"] .vyro-about-story-content>.vyro-about-eyebrow {
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+}
+
+html[dir="rtl"] .vyro-about-team-heading .vyro-about-eyebrow,
+html[dir="rtl"] .vyro-about-philosophy-content>.vyro-about-eyebrow {
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+}
+
+html[dir="rtl"] .vyro-about-team-heading h2,
+html[dir="rtl"] .vyro-about-team-heading>p,
+html[dir="rtl"] .vyro-about-philosophy-content h2,
+html[dir="rtl"] .vyro-about-philosophy-content>p,
+html[dir="rtl"] .vyro-about-philosophy-points>div>span {
+    direction: ltr;
+    text-align: right;
+}
+
 html[dir="rtl"] .vyro-about-purpose-top {
     flex-direction: row-reverse;
 }
@@ -7791,6 +7819,11 @@ html[dir="rtl"] .vyro-about-team-footer {
 
 html[dir="rtl"] .vyro-about-philosophy-points>div {
     flex-direction: row-reverse;
+    align-self: flex-end;
+}
+
+html[dir="rtl"] .vyro-about-philosophy-points {
+    direction: ltr;
 }
 
 html[dir="rtl"] .vyro-about-final-button {
@@ -8498,16 +8531,28 @@ html[dir="rtl"] .vyro-schedule-guide .vyro-schedule-eyebrow {
 }
 
 html[dir="rtl"] .vyro-schedule-guide-item-top {
-    flex-direction: row-reverse;
+    direction: rtl;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .vyro-schedule-guide-item h3,
+html[dir="rtl"] .vyro-schedule-guide-item>p {
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: right;
 }
 
 html[dir="rtl"] .vyro-schedule-guide-tag {
     margin-left: 0;
-    margin-right: auto;
+    margin-right: 0;
 }
 
 html[dir="rtl"] .vyro-schedule-guide-recommendation {
-    flex-direction: row-reverse;
+    direction: ltr;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 html[dir="rtl"] .vyro-schedule-guide-tip {
@@ -8598,7 +8643,7 @@ html[dir="rtl"] .vyro-schedule-guide-link:hover i {
     margin-bottom: 25px;
     padding: 17px 20px;
     background: #f0f3e8;
-    border-left: 4px solid #829b4a;
+    border-inline-start: 4px solid #829b4a;
     border-radius: 6px;
 }
 
@@ -8663,7 +8708,7 @@ html[dir="rtl"] .vyro-schedule-guide-link:hover i {
     width: 100%;
     min-width: 920px;
     border-collapse: collapse;
-    text-align: left;
+    text-align: start;
 }
 
 .vyro-weekly-table thead {
@@ -8996,10 +9041,12 @@ html.dark-mode .vyro-weekly-footnote {
 
 html[dir="rtl"] .vyro-weekly-heading {
     direction: rtl;
+    text-align: right;
 }
 
 html[dir="rtl"] .vyro-weekly-eyebrow {
     flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 html[dir="rtl"] .vyro-weekly-notice,
@@ -9009,11 +9056,12 @@ html[dir="rtl"] .vyro-weekly-footnote {
 
 html[dir="rtl"] .vyro-weekly-table {
     direction: rtl;
-    text-align: right;
+    text-align: start;
 }
 
 html[dir="rtl"] .vyro-weekly-class-cell {
     flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 html[dir="rtl"] .vyro-weekly-cta {
@@ -19236,16 +19284,17 @@ html[dir="rtl"] .vyro-schedule-guide-container,
 html[dir="rtl"] .vyro-weekly-heading,
 html[dir="rtl"] .vyro-first-ride-container {
     direction: rtl;
+    text-align: right;
 }
 
 html[dir="rtl"] .vyro-weekly-table {
     direction: rtl;
-    text-align: right;
+    text-align: start;
 }
 
 html[dir="rtl"] .vyro-weekly-notice {
-    border-left: none;
-    border-right: 4px solid #829b4a;
+    border-inline-start: 4px solid #829b4a;
+    border-inline-end: 0;
 }
 
 html[dir="rtl"] .vyro-schedule-ride-number {
@@ -22110,4 +22159,73 @@ html.dark-mode .vyro-weekly-notice>i {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* ==========================================
+   VYRO HERO — RTL POSITION ONLY
+   Preserve all existing sizes and dimensions
+========================================== */
+
+html[dir="rtl"] .vyro-hero-copy {
+    direction: rtl;
+    text-align: right;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+html[dir="rtl"] .vyro-hero-copy h1,
+html[dir="rtl"] .vyro-hero-copy h2,
+html[dir="rtl"] .vyro-hero-copy p {
+    text-align: right;
+}
+
+/* Move decorative orbit to the opposite side */
+html[dir="rtl"] .vyro-hero-visual {
+    left: 0 !important;
+    right: auto !important;
+}
+
+/* Keep orbit's original dimensions */
+html[dir="rtl"] .vyro-orbit {
+    right: auto;
+}
+
+/* Reposition slide indicators only */
+html[dir="rtl"] .vyro-slide-number {
+    left: auto !important;
+    right: 2% !important;
+}
+
+/* Reposition vertical caption only */
+html[dir="rtl"] .vyro-vertical-caption {
+    right: auto !important;
+    left: 1.5% !important;
+}
+
+/* Keep existing button sizes */
+html[dir="rtl"] .vyro-hero-actions {
+    direction: rtl;
+}
+
+/* Mobile: hide decorative orbit to prevent overlap */
+@media (max-width: 768px) {
+    html[dir="rtl"] .vyro-hero-visual {
+        display: none !important;
+    }
+}
+
+/* RTL: Phone Number field right alignment only */
+html[dir="rtl"] #vyroContactPhone {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] #vyroContactPhone::placeholder {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] .vyro-message-center__field:has(#vyroContactPhone)>label {
+    text-align: right !important;
+    direction: rtl !important;
 }

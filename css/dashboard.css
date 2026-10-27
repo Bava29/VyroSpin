@@ -6910,3 +6910,122 @@ html[dir="rtl"] .vyro-progress-main {
 html[dir="rtl"] .vyro-progress-ride-status {
     margin-inline-start: 0;
 }
+
+
+/* Reset button hover visibility fix */
+.vyro-schedule-reset {
+    color: #193B32;
+    background: #D6F36A;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.vyro-schedule-reset:hover,
+.vyro-schedule-reset:focus-visible {
+    color: #193B32 !important;
+    background: #E5FF85 !important;
+    opacity: 1 !important;
+}
+
+/* Reset icon visibility */
+.vyro-schedule-reset i {
+    color: inherit !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Membership benefits icons - Dark mode visibility fix */
+html.dark-mode .vyro-member-benefit-icon,
+body.dark-mode .vyro-member-benefit-icon,
+html.dark-mode .vyro-member-summary-icon,
+body.dark-mode .vyro-member-summary-icon,
+html.dark-mode .vyro-member-usage-icon,
+body.dark-mode .vyro-member-usage-icon {
+    background: #D6F36A !important;
+    color: #193B32 !important;
+    border-color: #D6F36A !important;
+}
+
+/* Ensure icons remain clearly visible */
+html.dark-mode .vyro-member-benefit-icon i,
+body.dark-mode .vyro-member-benefit-icon i,
+html.dark-mode .vyro-member-summary-icon i,
+body.dark-mode .vyro-member-summary-icon i,
+html.dark-mode .vyro-member-usage-icon i,
+body.dark-mode .vyro-member-usage-icon i {
+    color: #193B32 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Smooth icon contrast */
+.vyro-member-benefit-icon,
+.vyro-member-summary-icon,
+.vyro-member-usage-icon {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Dark mode - Explore More Classes button hover fix */
+html.dark-mode .vyro-progress-secondary-btn:hover,
+body.dark-mode .vyro-progress-secondary-btn:hover,
+html.dark-mode .vyro-progress-secondary-btn:focus-visible,
+body.dark-mode .vyro-progress-secondary-btn:focus-visible {
+    color: #193B32 !important;
+    background-color: #D6F36A !important;
+    border-color: #D6F36A !important;
+    opacity: 1 !important;
+}
+
+/* Keep button text and arrow visible */
+html.dark-mode .vyro-progress-secondary-btn:hover *,
+body.dark-mode .vyro-progress-secondary-btn:hover *,
+html.dark-mode .vyro-progress-secondary-btn:focus-visible *,
+body.dark-mode .vyro-progress-secondary-btn:focus-visible * {
+    color: #193B32 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* =========================================
+   STRONG RTL OVERRIDE — INSTRUCTORS PAGE
+   Add at the VERY END of dashboard.css
+========================================= */
+
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-hero-content,
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-hero-content .vyro-dinst-eyebrow,
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-hero-content h1,
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-hero-content p {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-hero-content {
+    justify-self: end !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-hero-stats {
+    direction: rtl !important;
+    justify-content: flex-start !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-hero-stats>div {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-section-heading,
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-section-heading>div,
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-section-heading .vyro-dinst-eyebrow,
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-section-heading h2,
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-section-heading p {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] body.vyro-dashboard .vyro-dinst-section-heading>div {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
