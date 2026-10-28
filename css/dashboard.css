@@ -3467,6 +3467,7 @@ html[dir="rtl"] .vyro-bookings-class-btn>i {
     flex: 0 0 39px;
     width: 39px;
     height: 39px;
+    object-fit: cover;
     color: var(--vyd-green);
     background: var(--vyd-lime);
     border-radius: 50%;
@@ -3799,6 +3800,19 @@ html.dark-mode .vyro-schedule-guide-card {
 
 html[dir="rtl"] .vyro-schedule-main {
     direction: rtl;
+}
+
+html[dir="rtl"] .vyro-schedule-field input[type="date"] {
+    direction: rtl;
+    text-align: right;
+    position: relative;
+    padding-left: 38px;
+}
+
+html[dir="rtl"] .vyro-schedule-field input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 12px;
+    right: auto;
 }
 
 
@@ -7112,4 +7126,92 @@ html[dir="rtl"] body.vyro-dashboard .vyro-dinst-section-heading>div {
         margin-right: 0 !important;
         margin-left: 0 !important;
     }
+}
+
+
+/* =========================================
+   MY BOOKINGS - DROPDOWN ARROW SPACING
+   LIGHT MODE + DARK MODE
+   ========================================= */
+
+body.vyro-dashboard #vyroBookingsFilter,
+body.vyro-dashboard #vyroBookingsSort {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+
+    /* Space for arrow on the right */
+    padding-right: 48px !important;
+    padding-left: 22px !important;
+
+    background-repeat: no-repeat !important;
+    background-position: right 10px center !important;
+    background-size: 15px 15px !important;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23193B32' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+
+    cursor: pointer;
+}
+
+/* DARK MODE */
+html.dark-mode body.vyro-dashboard #vyroBookingsFilter,
+html.dark-mode body.vyro-dashboard #vyroBookingsSort {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23F2F5ED' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+
+    background-position: right 10px center !important;
+}
+
+/* RTL MODE */
+html[dir="rtl"] body.vyro-dashboard #vyroBookingsFilter,
+html[dir="rtl"] body.vyro-dashboard #vyroBookingsSort {
+    padding-right: 22px !important;
+    padding-left: 48px !important;
+
+    background-position: left 10px center !important;
+}
+
+html.dark-mode[dir="rtl"] body.vyro-dashboard #vyroBookingsFilter,
+html.dark-mode[dir="rtl"] body.vyro-dashboard #vyroBookingsSort {
+    background-position: left 10px center !important;
+}
+
+
+/* =========================================
+   SCHEDULE RIDE TYPE DROPDOWN ARROW FIX
+   LIGHT + DARK MODE
+   ========================================= */
+
+body.vyro-dashboard #vyroScheduleType {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+
+    box-sizing: border-box !important;
+    padding-right: 44px !important;
+    padding-left: 18px !important;
+
+    background-repeat: no-repeat !important;
+    background-position: right 10px center !important;
+    background-size: 15px 15px !important;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23193B32' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+
+    cursor: pointer;
+}
+
+/* DARK MODE */
+html.dark-mode body.vyro-dashboard #vyroScheduleType {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F2F5ED' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+    background-position: right 10px center !important;
+}
+
+/* RTL MODE */
+html[dir="rtl"] body.vyro-dashboard #vyroScheduleType {
+    padding-right: 18px !important;
+    padding-left: 44px !important;
+    background-position: left 10px center !important;
+}
+
+html.dark-mode[dir="rtl"] body.vyro-dashboard #vyroScheduleType {
+    background-position: left 10px center !important;
 }

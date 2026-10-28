@@ -9848,7 +9848,7 @@ html[dir="rtl"] .vyro-first-ride-primary-btn i {
     margin: 0 0 8px;
     color: #193B32;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 29px;
+    font-size: 26px;
     font-weight: 600;
     line-height: 1.12;
     overflow-wrap: anywhere;
@@ -23497,4 +23497,110 @@ html[dir="rtl"] .vyro-message-center__field:has(#vyroContactPhone)>label {
         white-space: normal !important;
         overflow-wrap: break-word !important;
     }
+}
+
+
+/* ==========================================
+   VYRO HOME 2 — iPad Mini Card Alignment
+   First 2 cards side-by-side
+   Last card centered with matching width
+========================================== */
+
+@media screen and (min-width: 601px) and (max-width: 820px) {
+
+    html body .vyro-h2-difference .vyro-h2-diff-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        column-gap: 15px !important;
+        row-gap: 15px !important;
+        align-items: stretch !important;
+    }
+
+    /* First two cards remain side-by-side */
+    html body .vyro-h2-difference .vyro-h2-diff-grid>.vyro-h2-diff-card:nth-child(1),
+    html body .vyro-h2-difference .vyro-h2-diff-grid>.vyro-h2-diff-card:nth-child(2) {
+        grid-column: auto !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        justify-self: stretch !important;
+    }
+
+    /* Third card centered, same width as the first two */
+    html body .vyro-h2-difference .vyro-h2-diff-grid>.vyro-h2-diff-card:last-child {
+        grid-column: 1 / -1 !important;
+        width: calc((100% - 15px) / 2) !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        justify-self: center !important;
+        min-height: 0 !important;
+    }
+}
+
+
+/* iPad Pro — Keep session arrow inside card edges */
+@media screen and (min-width: 821px) and (max-width: 1024px) {
+
+    html body .vyro-h2-sessions .vyro-h2-session-item {
+        position: relative !important;
+        padding-right: 48px !important;
+        min-width: 0 !important;
+    }
+
+    html body .vyro-h2-sessions .vyro-h2-session-arrow {
+        position: absolute !important;
+        right: 12px !important;
+        left: auto !important;
+        margin: 0 !important;
+        transform: none !important;
+        flex-shrink: 0 !important;
+        z-index: 2 !important;
+    }
+
+    html body .vyro-h2-sessions .vyro-h2-session-item>* {
+        min-width: 0;
+    }
+}
+
+
+/* ==========================================
+   CONTACT FORM — DROPDOWN ARROW FIX
+   LIGHT + DARK MODE
+   ========================================== */
+
+html body .vyro-message-center__field select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+
+    /* Keep arrow away from the right edge */
+    padding-right: 58px !important;
+    padding-left: 10px !important;
+
+    background-repeat: no-repeat !important;
+    background-position: right 10px center !important;
+    background-size: 15px 15px !important;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23193B32' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+
+    cursor: pointer !important;
+}
+
+/* DARK MODE */
+html.dark-mode body .vyro-message-center__field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23F2F5ED' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+
+    background-position: right 10px center !important;
+}
+
+/* RTL MODE — move arrow inward from the left edge */
+html[dir="rtl"] body .vyro-message-center__field select {
+    padding-right: 22px !important;
+    padding-left: 58px !important;
+
+    background-position: left 10px center !important;
+}
+
+html.dark-mode[dir="rtl"] body .vyro-message-center__field select {
+    background-position: left 10px center !important;
 }
