@@ -7029,3 +7029,87 @@ html[dir="rtl"] body.vyro-dashboard .vyro-dinst-section-heading>div {
     margin-left: auto !important;
     margin-right: 0 !important;
 }
+
+
+/* =========================================
+   MY BOOKINGS - CENTER LAST CLASS CARD
+   iPad Pro
+========================================= */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .vyro-bookings-class-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .vyro-bookings-class-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 9px);
+        justify-self: center;
+    }
+}
+
+/* =========================================
+   iPad Mini
+========================================= */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .vyro-bookings-class-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .vyro-bookings-class-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 9px);
+        justify-self: center;
+    }
+}
+
+
+/* =========================================
+   MEMBERSHIP - CENTER LAST PACKAGE CARD
+   iPad Pro: 769px - 1024px
+   iPad Mini: 601px - 768px
+========================================= */
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .vyro-member-package-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .vyro-member-package-grid>.vyro-member-package:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 9px);
+        justify-self: center;
+    }
+}
+
+
+/* iPad Pro - My Progress top spacing */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .vyro-progress-main {
+        padding-top: calc(var(--vyd-header-height) + 48px) !important;
+    }
+}
+
+
+/* iPad Mini — fix top spacing and side margins */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+
+    body.vyro-dashboard .vyro-progress-main {
+        width: 100% !important;
+        margin-top: 0 !important;
+        padding-top: calc(var(--vyd-header-height) + 24px) !important;
+        padding-right: 18px !important;
+        padding-bottom: 24px !important;
+        padding-left: 18px !important;
+    }
+
+    body.vyro-dashboard .vyro-progress-hero {
+        margin-top: 0 !important;
+        width: 100% !important;
+    }
+
+    body.vyro-dashboard .vyro-progress-main>section {
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}
