@@ -7215,3 +7215,61 @@ html[dir="rtl"] body.vyro-dashboard #vyroScheduleType {
 html.dark-mode[dir="rtl"] body.vyro-dashboard #vyroScheduleType {
     background-position: left 10px center !important;
 }
+
+
+/* DASHBOARD - ALIGN ALL FOUR STAT CARDS */
+
+.vyro-dash-overview-stat-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.vyro-dash-overview-stat-card>strong {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    margin: 17px 0 7px;
+    line-height: 1 !important;
+}
+
+/* Membership Active text */
+.vyro-dash-overview-stat-card>.vyro-dash-overview-membership-status {
+    min-height: 40px;
+    margin: 17px 0 7px !important;
+    font-size: 28px;
+    line-height: 1 !important;
+}
+
+/* Keep description aligned */
+.vyro-dash-overview-stat-card>p {
+    margin-top: 0;
+}
+
+
+/* MY PROGRESS - DROPDOWN ARROW ALIGNMENT */
+
+/* Light mode */
+.vyro-progress-goal-controls select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    padding: 9px 42px 9px 12px !important;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23193B32' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px;
+}
+
+/* Dark mode */
+html.dark-mode .vyro-progress-goal-controls select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23D6F36A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* RTL mode */
+html[dir="rtl"] .vyro-progress-goal-controls select {
+    padding: 9px 12px 9px 42px !important;
+    background-position: left 10px center;
+}

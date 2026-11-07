@@ -7817,13 +7817,32 @@ html[dir="rtl"] .vyro-about-team-footer {
     direction: rtl;
 }
 
-html[dir="rtl"] .vyro-about-philosophy-points>div {
-    flex-direction: row-reverse;
-    align-self: flex-end;
+/* ==========================================
+   ABOUT - EXPLORE OUR RIDES RTL FIX
+========================================== */
+
+html[dir="rtl"] .vyro-about-philosophy-content>a.vyro-about-text-link {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    direction: rtl !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: fit-content !important;
+    max-width: 100%;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    text-align: right !important;
+    gap: 12px !important;
 }
 
-html[dir="rtl"] .vyro-about-philosophy-points {
-    direction: ltr;
+html[dir="rtl"] .vyro-about-philosophy-content>a.vyro-about-text-link>i {
+    order: 2 !important;
+    margin: 0 !important;
+    transform: none !important;
+}
+
+html[dir="rtl"] .vyro-about-philosophy-content>a.vyro-about-text-link:hover>i {
+    transform: translateX(-5px) !important;
 }
 
 html[dir="rtl"] .vyro-about-final-button {
@@ -8231,12 +8250,14 @@ html[dir="rtl"] .vyro-schedule-ride-meta {
 }
 
 html[dir="rtl"] .vyro-schedule-ride-benefit {
-    flex-direction: row-reverse;
+    flex-direction: row;
+    text-align: right;
 }
 
 html[dir="rtl"] .vyro-schedule-ride-content>a,
 html[dir="rtl"] .vyro-schedule-rides-tip>a {
-    flex-direction: row-reverse;
+    flex-direction: row;
+    text-align: right;
 }
 
 html[dir="rtl"] .vyro-schedule-ride-content>a:hover i,
@@ -8517,7 +8538,7 @@ html[dir="rtl"] .vyro-schedule-rides-tip>a:hover i {
 /* DARK MODE */
 
 html.dark-mode .vyro-schedule-guide {
-    background: #101b16;
+    background: #17251d;
 }
 
 /* RTL */
@@ -9639,20 +9660,6 @@ html.dark-mode .vyro-first-ride-note {
 
 html.dark-mode .vyro-first-ride-eyebrow {
     color: #D6F36A;
-}
-
-html.dark-mode .vyro-first-ride-image-badge {
-    background: #17251d;
-    color: #ffffff;
-}
-
-html.dark-mode .vyro-first-ride-badge-icon {
-    border-color: rgba(214, 243, 106, 0.55);
-    color: #d6f36a;
-}
-
-html.dark-mode .vyro-first-ride-image-badge>div span {
-    color: #c2cec5;
 }
 
 html.dark-mode .vyro-first-ride-secondary-btn {
@@ -23603,4 +23610,173 @@ html[dir="rtl"] body .vyro-message-center__field select {
 
 html.dark-mode[dir="rtl"] body .vyro-message-center__field select {
     background-position: left 10px center !important;
+}
+
+
+/* ABOUT PAGE - VISION CARD DIVIDER FIX */
+html.dark-mode .vyro-about-vision .vyro-about-purpose-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff;
+}
+
+/* Mission card divider consistency */
+html.dark-mode .vyro-about-mission .vyro-about-purpose-bottom {
+    border-top-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Dark mode - caption box contrast */
+html.dark-mode .vyro-schedule-guide-image-caption {
+    background: #0B1713 !important;
+    border: 1px solid rgba(214, 243, 106, 0.25);
+    border-radius: 6px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35);
+    padding: 14px 18px;
+    color: #FFFFFF;
+}
+
+/* ==========================================
+   iPAD MINI — MEMBERSHIP BENEFIT ALIGNMENT
+========================================== */
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+
+    html body .vyro-membership-plans .vyro-membership-benefits {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        align-items: start !important;
+        justify-items: stretch !important;
+        column-gap: 24px !important;
+        row-gap: 22px !important;
+    }
+
+    html body .vyro-membership-plans .vyro-membership-benefit {
+        display: grid !important;
+        grid-template-columns: 26px minmax(0, 1fr) !important;
+        align-items: start !important;
+        justify-content: start !important;
+        gap: 12px !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+
+    html body .vyro-membership-plans .vyro-membership-benefit>i {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 26px !important;
+        min-width: 26px !important;
+        margin: 2px 0 0 !important;
+        font-size: 21px !important;
+        line-height: 1 !important;
+    }
+
+    html body .vyro-membership-plans .vyro-membership-benefit>div {
+        min-width: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    html body .vyro-membership-plans .vyro-membership-benefit h4 {
+        margin: 0 0 3px !important;
+        line-height: 1.25 !important;
+    }
+
+    html body .vyro-membership-plans .vyro-membership-benefit p {
+        margin: 0 !important;
+        line-height: 1.4 !important;
+    }
+
+    /* RTL alignment */
+    html[dir="rtl"] body .vyro-membership-plans .vyro-membership-benefit {
+        direction: rtl !important;
+        text-align: right !important;
+    }
+}
+
+/* ==========================================
+   iPAD PRO — HERO SLIDER PAGINATION POSITION
+========================================== */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .vyro-hero .vyro-slider-controls {
+        bottom: 100px !important;
+        right: 5% !important;
+        left: auto !important;
+        z-index: 15 !important;
+    }
+
+    /* RTL support */
+    html[dir="rtl"] .vyro-hero .vyro-slider-controls {
+        right: auto !important;
+        left: 5% !important;
+    }
+}
+
+/* MOBILE — MOVE ONLY THE BADGE TO THE RIGHT */
+@media screen and (max-width: 599px) {
+    .vyro-h2-final-stamp {
+        left: 2px !important;
+        right: auto !important;
+        transform: rotate(-5deg) !important;
+    }
+
+    html[dir="rtl"] .vyro-h2-final-stamp {
+        left: auto !important;
+        right: 2px !important;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .vyro-h2-final-stamp {
+        top: -30px !important;
+    }
+}
+
+/* =========================================
+   MOBILE – MEMBERSHIP BENEFITS ALIGNMENT
+   ========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .vyro-membership-benefits {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        align-items: stretch !important;
+        row-gap: 22px !important;
+    }
+
+    .vyro-membership-benefit {
+        display: grid !important;
+        grid-template-columns: 32px minmax(0, 1fr) !important;
+        align-items: center !important;
+        column-gap: 12px !important;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .vyro-membership-benefit>i {
+        width: 32px !important;
+        min-width: 32px !important;
+        text-align: center !important;
+        justify-self: center !important;
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+    }
+
+    .vyro-membership-benefit>div {
+        min-width: 0 !important;
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    .vyro-membership-benefit h4,
+    .vyro-membership-benefit p {
+        margin-left: 0 !important;
+        text-align: left !important;
+    }
 }
