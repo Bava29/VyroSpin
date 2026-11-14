@@ -522,6 +522,11 @@ body.vyro-auth-page {
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
+/* The page-level button reset uses `font: inherit` with higher specificity. */
+.vyro-auth-page .vyro-auth-submit {
+    font-weight: 700;
+}
+
 .vyro-auth-submit:hover {
     background: #c9e85a;
     transform: translateY(-1px);
